@@ -25,14 +25,7 @@ Qui trovi raccolti tutti i pack PromptMagnet, pensati per creator, freelancer, e
 - AI per Educatori (Toolkit IA Didattico)
 - Crea Senza Limiti (Visivo – in arrivo)
 
-## 🌐 Live Preview
-👉 [https://andrecoluvideo.github.io/promptmagnet-landing/](https://andrecoluvideo.github.io/promptmagnet-landing/)
 
-## 📂 Come usare questo repo
-1. Clona o scarica il progetto
-2. Inserisci le immagini nella cartella `img/`
-3. Modifica o aggiorna i link se necessario
-4. Apri `index.html` nel browser per vedere la landing
 
 ## 📬 Contatti
 Creata da [Andrea Colucci](https://www.instagram.com/andrecolu_video) – Film Maker, AI Maker, Content Creator.
