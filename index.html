@@ -28,16 +28,9 @@
       margin-bottom: 40px;
     }
     .pack {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
       margin-bottom: 60px;
       background-color: #111;
       padding: 20px;
-      border-radius: 10px;
-    }
-    .pack img {
-      max-width: 100%;
       border-radius: 10px;
     }
     .pack iframe {
@@ -45,12 +38,14 @@
       height: 300px;
       border: none;
       border-radius: 10px;
+      margin-top: 20px;
     }
     .pack h2 {
       font-size: 1.8rem;
     }
     .pack p {
       font-size: 1rem;
+      margin: 15px 0;
     }
     .terminated {
       color: #f55;
@@ -62,33 +57,88 @@
       font-size: 1.2rem;
       margin-top: 30px;
     }
-    @media (min-width: 768px) {
-      .pack {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-      .pack .text {
-        flex: 2;
-        padding-right: 20px;
-      }
-      .pack .media {
-        flex: 1.5;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>I Pack Ufficiali di Andrea Colucci</h1>
 
-    <!-- Descrizione commerciale -->
     <p style="text-align:center; max-width:800px; margin: 0 auto 60px; font-size: 1.1rem; color:#ccc;">
       💡 Tutti i miei prodotti digitali in un’unica landing: PromptMagnet INFINITE, ELITE, Tools, Stories e molto altro. <br>
       Prompt, animazioni, storytelling e contenuti virali per chi vuole dominare la scena con l’intelligenza artificiale. <br>
       13 pack professionali – tutto ciò che uso, ora lo puoi usare anche tu.
     </p>
 
-    <!-- ... resto del contenuto invariato ... -->
+    <!-- Esempio di pack senza immagine -->
+    <div class="pack">
+      <h2>AI per Educatori</h2>
+      <p>Guida avanzata per creare risorse didattiche personalizzate con l’Intelligenza Artificiale. Pensato per formatori, educatori e docenti.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/ai-per-educatori" target="_blank">Vai al prodotto</a>
+    </div>
+
+    <div class="pack">
+      <h2>📦 CREA SENZA LIMITI – PACK VISIVO COMPLETO</h2>
+      <p class="terminated">TERMINATO – In uscita prossimamente</p>
+      <p>Il pacchetto visivo definitivo con esempi, personaggi, immagini, storytelling e animazioni. Più di 500 pagine di guida e casi studio.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/creasenzalimiti-packvisivo" target="_blank">Scopri il pack</a>
+    </div>
+
+    <div class="pack">
+      <h2>CREA DA ZERO</h2>
+      <p>Una guida concreta e strategica per lanciare il tuo primo prodotto digitale con l’IA, anche se parti da zero.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/crea-da-zero" target="_blank">Inizia ora</a>
+    </div>
+
+    <div class="pack">
+      <h2>PromptMagnet – INFINITE EDITION</h2>
+      <p>Il pack più completo: 100 prompt avanzati divisi per stile, PDF, animazioni, script, caption, storytelling personalizzati.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite" target="_blank">SCARICA ORA</a>
+      <iframe src="https://www.youtube.com/embed/kInclOl-NlY" allowfullscreen></iframe>
+    </div>
+
+    <div class="pack">
+      <h2>PromptMagnet – ELITE CHARACTERS</h2>
+      <p>Un pack premium per generare personaggi visivi unici in ogni stile, con risultati pronti per TikTok, Instagram e animazioni.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite" target="_blank">Scopri ora</a>
+    </div>
+
+    <div class="pack">
+      <h2>PromptMagnet Stories</h2>
+      <p>Un pacchetto dedicato al potere dello storytelling. Prompt per narrazioni visive, emozionali e seriali.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/Stories" target="_blank">Scopri ora</a>
+    </div>
+
+    <div class="pack">
+      <h2>PromptMagnet Tools – PRO Edition</h2>
+      <p>Strumenti pratici per automatizzare e semplificare il content creation: template, checklist, esempi, workflow.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/prompttoolspro" target="_blank">Scopri gli strumenti</a>
+    </div>
+
+    <div class="pack">
+      <h2>PromptMagnet Freelance – Brand & Vendita (Pro)</h2>
+      <p>Strategie e prompt per comunicare in modo professionale, vendere, scrivere DM perfetti e presentazioni efficaci.</p>
+      <a href="https://andrecoluvideo.gumroad.com/l/freelancepro" target="_blank">Guarda ora</a>
+    </div>
+
+    <div class="pack">
+      <h2>Preview dinamica</h2>
+      <p>Guarda uno short con i risultati creativi ottenibili dai nostri prompt.</p>
+      <iframe src="https://www.youtube.com/embed/1-kif1pjtS8" allowfullscreen></iframe>
+    </div>
+
+    <div class="viewer-counter">
+      Visitatori online: <span id="counter">...</span>
+    </div>
   </div>
+
+  <script>
+    const counter = document.getElementById("counter");
+    const updateCount = () => {
+      const visitors = Math.floor(Math.random() * 80 + 20);
+      counter.textContent = visitors;
+    };
+    updateCount();
+    setInterval(updateCount, 8000);
+  </script>
 </body>
 </html>
