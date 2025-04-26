@@ -1,144 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrea Colucci – Tutti i Pack</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrea Colucci - Pack Store</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: #fff;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: #00ffee;
-    }
-    .container {
-      padding: 40px 5vw;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.8rem;
-      margin-bottom: 40px;
-    }
-    .pack {
-      margin-bottom: 60px;
-      background-color: #111;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .pack iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .pack h2 {
-      font-size: 1.8rem;
-    }
-    .pack p {
-      font-size: 1rem;
-      margin: 15px 0;
-    }
-    .terminated {
-      color: #f55;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .viewer-counter {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-top: 30px;
-    }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header { text-align: center; padding: 40px 20px; background: #ffffff; }
+    h1 { color: #0077ff; margin-bottom: 10px; }
+    section.videos, section.products { padding: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .video-container, iframe { border-radius: 10px; overflow: hidden; }
+    .video-container video { width: 100%; height: auto; border-radius: 10px; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .product { background: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; }
+    .product:hover { transform: scale(1.03); }
+    .product img { max-width: 100%; border-radius: 10px; margin-bottom: 10px; }
+    .product-title { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 8px; }
+    .product-desc { font-size: 14px; color: #666; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: #777; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>I Pack Ufficiali di Andrea Colucci</h1>
 
-    <p style="text-align:center; max-width:800px; margin: 0 auto 60px; font-size: 1.1rem; color:#ccc;">
-      💡 Tutti i miei prodotti digitali in un’unica landing: PromptMagnet INFINITE, ELITE, Tools, Stories e molto altro. <br>
-      Prompt, animazioni, storytelling e contenuti virali per chi vuole dominare la scena con l’intelligenza artificiale. <br>
-      13 pack professionali – tutto ciò che uso, ora lo puoi usare anche tu.
-    </p>
+<header>
+  <h1>Benvenuto nel Pack Store di Andrea Colucci</h1>
+  <p>I migliori pack per la creazione di contenuti visivi e personaggi IA</p>
+</header>
 
-    <!-- Esempio di pack senza immagine -->
-    <div class="pack">
-      <h2>AI per Educatori</h2>
-      <p>Guida avanzata per creare risorse didattiche personalizzate con l’Intelligenza Artificiale. Pensato per formatori, educatori e docenti.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/ai-per-educatori" target="_blank">Vai al prodotto</a>
-    </div>
-
-    <div class="pack">
-      <h2>📦 CREA SENZA LIMITI – PACK VISIVO COMPLETO</h2>
-      <p class="terminated">TERMINATO – In uscita prossimamente</p>
-      <p>Il pacchetto visivo definitivo con esempi, personaggi, immagini, storytelling e animazioni. Più di 500 pagine di guida e casi studio.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/creasenzalimiti-packvisivo" target="_blank">Scopri il pack</a>
-    </div>
-
-    <div class="pack">
-      <h2>CREA DA ZERO</h2>
-      <p>Una guida concreta e strategica per lanciare il tuo primo prodotto digitale con l’IA, anche se parti da zero.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/crea-da-zero" target="_blank">Inizia ora</a>
-    </div>
-
-    <div class="pack">
-      <h2>PromptMagnet – INFINITE EDITION</h2>
-      <p>Il pack più completo: 100 prompt avanzati divisi per stile, PDF, animazioni, script, caption, storytelling personalizzati.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite" target="_blank">SCARICA ORA</a>
-      <iframe src="https://www.youtube.com/embed/kInclOl-NlY" allowfullscreen></iframe>
-    </div>
-
-    <div class="pack">
-      <h2>PromptMagnet – ELITE CHARACTERS</h2>
-      <p>Un pack premium per generare personaggi visivi unici in ogni stile, con risultati pronti per TikTok, Instagram e animazioni.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite" target="_blank">Scopri ora</a>
-    </div>
-
-    <div class="pack">
-      <h2>PromptMagnet Stories</h2>
-      <p>Un pacchetto dedicato al potere dello storytelling. Prompt per narrazioni visive, emozionali e seriali.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/Stories" target="_blank">Scopri ora</a>
-    </div>
-
-    <div class="pack">
-      <h2>PromptMagnet Tools – PRO Edition</h2>
-      <p>Strumenti pratici per automatizzare e semplificare il content creation: template, checklist, esempi, workflow.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/prompttoolspro" target="_blank">Scopri gli strumenti</a>
-    </div>
-
-    <div class="pack">
-      <h2>PromptMagnet Freelance – Brand & Vendita (Pro)</h2>
-      <p>Strategie e prompt per comunicare in modo professionale, vendere, scrivere DM perfetti e presentazioni efficaci.</p>
-      <a href="https://andrecoluvideo.gumroad.com/l/freelancepro" target="_blank">Guarda ora</a>
-    </div>
-
-    <div class="pack">
-      <h2>Preview dinamica</h2>
-      <p>Guarda uno short con i risultati creativi ottenibili dai nostri prompt.</p>
-      <iframe src="https://www.youtube.com/embed/1-kif1pjtS8" allowfullscreen></iframe>
-    </div>
-
-    <div class="viewer-counter">
-      Visitatori online: <span id="counter">...</span>
-    </div>
+<section class="videos">
+  <div class="video-container" style="flex: 1 1 60%;">
+    <video autoplay muted loop playsinline src="TuoVideoOrizzontale.mp4"></video>
   </div>
+</section>
 
-  <script>
-    const counter = document.getElementById("counter");
-    const updateCount = () => {
-      const visitors = Math.floor(Math.random() * 80 + 20);
-      counter.textContent = visitors;
-    };
-    updateCount();
-    setInterval(updateCount, 8000);
-  </script>
+<section class="videos">
+  <div class="video-container" style="flex: 1 1 45%;">
+    <video autoplay muted loop playsinline src="TuoVideoVerticale1.mp4"></video>
+  </div>
+  <div class="video-container" style="flex: 1 1 45%;">
+    <video autoplay muted loop playsinline src="TuoVideoVerticale2.mp4"></video>
+  </div>
+</section>
+
+<section class="videos">
+  <iframe width="320" height="560" src="https://www.youtube.com/embed/_nvLr1Be6-E?autoplay=1&mute=1&loop=1&playlist=_nvLr1Be6-E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</section>
+
+<section class="products">
+  <h2>Creazione Personaggi</h2>
+  <div class="products-grid">
+    <a class="product" href="LINK_GUMROAD_ELITE" target="_blank">
+      <img src="ELITE_IMAGE.jpg" alt="Elite Characters">
+      <div class="product-title">Elite Characters</div>
+      <div class="product-desc">Pack avanzato per creare personaggi iconici e in stile premium.</div>
+    </a>
+    <a class="product" href="LINK_GUMROAD_INFINITE" target="_blank">
+      <img src="INFINITE_IMAGE.jpg" alt="PromptMagnet Infinite Edition">
+      <div class="product-title">PromptMagnet Infinite</div>
+      <div class="product-desc">Il pacchetto più potente: creazioni illimitate, stili evoluti.</div>
+    </a>
+    <a class="product" href="LINK_GUMROAD_CHARACTERFORGE" target="_blank">
+      <img src="CHARACTERFORGE_IMAGE.jpg" alt="Character Forge">
+      <div class="product-title">Character Forge - Legend Pack</div>
+      <div class="product-desc">Forgia personaggi epici con dettagli e profondità uniche.</div>
+    </a>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Altri Pack PromptMagnet</h2>
+  <div class="products-grid">
+    <!-- Altri pack vanno qui -->
+  </div>
+</section>
+
+<footer>
+  Visite alla pagina: <img src="https://counterapi.dev/api/counter?name=andreacolucci&style=flat" alt="Counter">
+</footer>
+
 </body>
 </html>
