@@ -151,26 +151,29 @@
 }
 
 .motivational-text .line {
-  display: inline-block;
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-size: 22px;
   color: #ffffff;
-  margin: 10px 0;
+  margin: 10px auto;
   line-height: 1.8;
   max-width: 800px;
+  word-break: break-word;
 }
 
 .motivational-text .line strong {
-  color: #00bfff; /* o lasciarlo bianco se preferisci */
+  color: #00bfff;
 }
 
-/* Ottimizzazione per mobile */
+/* Ottimizzazione mobile */
 @media (max-width: 768px) {
   .motivational-text .line {
     font-size: 18px;
     padding: 0 20px;
     line-height: 1.6;
   }
+}
+
 
 
 
@@ -373,12 +376,13 @@ footer p {
 </div>
 
 <div class="motivational-text">
-  <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
-  <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
-  <p>Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
-  <p>Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
-  <p><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
+  <div class="line">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</div>
+  <div class="line">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</div>
+  <div class="line">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</div>
+  <div class="line">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</div>
+  <div class="line"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></div>
 </div>
+
 
 
 <footer>
