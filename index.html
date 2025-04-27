@@ -6,17 +6,15 @@
   <title>Creazione Personaggi - Andrea Colucci</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-html, body {
-  overflow-x: hidden;
-}
-
+    body, html {
       margin: 0;
+      overflow-x: hidden;
       background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><line x1="0" y1="200" x2="200" y2="0" stroke="%23330000" stroke-opacity="0.15" stroke-width="1"/></svg>') repeat;
       font-family: 'Helvetica Neue', sans-serif;
       color: #e0e0e0;
       background-attachment: fixed;
     }
+
     header {
       text-align: center;
       padding: 50px 20px 20px;
@@ -36,6 +34,7 @@ html, body {
       font-style: italic;
       margin-bottom: 40px;
     }
+
     .packs-container {
       display: flex;
       justify-content: center;
@@ -44,6 +43,7 @@ html, body {
       padding: 20px;
       position: relative;
     }
+
     .pack {
       background: #111111;
       border: 2px solid #00bfff;
@@ -55,50 +55,43 @@ html, body {
       text-decoration: none;
       color: inherit;
       overflow: visible;
+      margin-bottom: 40px; /* Aggiunto per staccare bene ogni pack */
     }
+
     .pack-green { border-color: #00ffae; }
     .pack-purple { border-color: #9d00ff; }
     .pack-blue { border-color: #00bfff; }
+
     .pack:hover {
       transform: scale(1.05);
     }
+
     .pack img {
       max-width: 100%;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Aggiunto spazio tra immagine e video */
       transition: transform 0.3s ease;
     }
-    .pack-title {
-      font-size: 20px;
-      margin-bottom: 5px;
-    }
-    .pack-price {
-      font-weight: bold;
-      font-size: 16px;
-      color: #00bfff;
-      margin-bottom: 10px;
-    }
-    .pack-desc {
-      font-size: 14px;
-      color: #cccccc;
-      margin-bottom: 10px;
-    }
+
     .video-box {
       width: 300px;
       height: 500px;
       overflow: hidden;
       border-radius: 12px;
       transition: transform 0.3s ease;
-      margin-top: 10px;
+      margin-top: 20px; /* aggiunto margine sopra il video */
     }
+
     .video-box:hover {
       transform: scale(1.05);
     }
+
     .video-box video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .side-text-pack-left, .side-text-pack-right, .side-text-video-left, .side-text-video-right, .side-text-top-left, .side-text-top-right {
       position: absolute;
       font-family: 'Raleway', sans-serif;
@@ -108,13 +101,13 @@ html, body {
       text-align: center;
       width: 220px;
     }
+
     .side-text-pack-left { left: 20px; top: 55%; transform: translateY(-50%); }
     .side-text-pack-right { right: 20px; top: 55%; transform: translateY(-50%); }
     .side-text-video-left { left: 20px; top: 81%; transform: translateY(-50%); }
     .side-text-video-right { right: 20px; top: 81%; transform: translateY(-50%); }
     .side-text-top-left { left: 20px; top: 5%; }
     .side-text-top-right { right: 20px; top: 5%; }
-    }
     .carousel {
       margin-top: 100px;
       overflow: hidden;
@@ -123,11 +116,13 @@ html, body {
       position: relative;
       z-index: 1;
     }
+
     .carousel-track {
       display: inline-flex;
       animation: scroll 100s linear infinite;
       will-change: transform;
     }
+
     .carousel img {
       height: 240px;
       margin: 0 10px;
@@ -135,20 +130,24 @@ html, body {
       border: 4px solid #00bfff;
       transition: transform 0.3s ease;
     }
+
     .carousel img:hover {
       transform: scale(1.1);
       z-index: 5;
     }
+
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
     .motivational-text {
       text-align: center;
       padding: 20px;
       margin: 40px auto;
       max-width: 800px;
     }
+
     .motivational-text p {
       font-family: 'Raleway', sans-serif;
       font-size: 22px;
@@ -157,15 +156,18 @@ html, body {
       line-height: 1.8;
       word-break: break-word;
     }
+
     .motivational-text p strong {
       color: #00bfff;
     }
+
     footer {
       text-align: center;
       width: 100%;
       margin-top: 40px;
       padding: 20px;
     }
+
     footer p {
       text-align: center;
       width: 100%;
@@ -173,18 +175,22 @@ html, body {
       color: #cccccc;
       margin-bottom: 10px;
     }
+
     .policies {
       font-size: 12px;
       margin-top: 10px;
     }
+
     .policies a {
       color: #00bfff;
       text-decoration: none;
       margin: 0 5px;
     }
+
     .policies a:hover {
       text-decoration: underline;
     }
+
     .full-policies {
       margin-top: 20px;
       font-size: 10px;
@@ -196,15 +202,18 @@ html, body {
       text-align: left;
       line-height: 1.6;
     }
+
     .full-policies p {
       margin: 8px 0;
     }
+
     @media (max-width: 768px) {
       .packs-container {
         flex-direction: column;
         align-items: center;
         gap: 30px;
       }
+
       .side-text-pack-left,
       .side-text-pack-right,
       .side-text-video-left,
@@ -217,20 +226,25 @@ html, body {
         margin: 20px 0;
         transform: none;
       }
+
       .video-box {
         width: 100%;
         height: auto;
       }
+
       .carousel img {
         height: 180px;
       }
+
       .motivational-text p {
         font-size: 18px;
         line-height: 1.6;
       }
+
       footer p {
         font-size: 12px;
       }
+
       .full-policies {
         padding: 0 15px;
       }
@@ -285,6 +299,7 @@ html, body {
 </div>
 <div class="carousel">
   <div class="carousel-track">
+    <!-- 50 immagini + 50 duplicate -->
     <img src="carousel/1.jpg" alt="1">
     <img src="carousel/2.jpg" alt="2">
     <img src="carousel/3.jpg" alt="3">
@@ -335,7 +350,8 @@ html, body {
     <img src="carousel/48.jpg" alt="48">
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
-    <!-- DUPLICAZIONE -->
+
+    <!-- duplicate per loop fluido -->
     <img src="carousel/1.jpg" alt="1 duplicate">
     <img src="carousel/2.jpg" alt="2 duplicate">
     <img src="carousel/3.jpg" alt="3 duplicate">
@@ -399,18 +415,18 @@ html, body {
 
 <footer>
   <p>Visite reali:</p>
-  <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset=\"2\"></script>
-  
-  <div class=\"policies\">
-    <a href=\"#\">Privacy Policy</a> | 
-    <a href=\"#\">Termini e Condizioni</a> | 
-    <a href=\"#\">Cookie Policy</a>
+  <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
+
+  <div class="policies">
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Termini e Condizioni</a> | 
+    <a href="#">Cookie Policy</a>
   </div>
 
-  <div class=\"full-policies\">
-    <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza il consenso dell'utente.</p>
-    <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è subordinato all'accettazione dei termini e condizioni qui esposti. È vietato l'uso illecito o fraudolento dei contenuti presenti.</p>
-    <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza di navigazione. Continuando a navigare, accetti l'utilizzo dei cookie. Maggiori dettagli sono disponibili nella sezione Cookie Policy.</p>
+  <div class="full-policies">
+    <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
+    <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
+    <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
   </div>
 </footer>
 
