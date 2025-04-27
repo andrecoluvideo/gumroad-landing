@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creazione Personaggi - Andrea Colucci</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -50,7 +50,7 @@
       transition: transform 0.3s ease, border-color 0.5s;
       text-decoration: none;
       color: inherit;
-      overflow: hidden;
+      overflow: visible;
     }
     .pack:nth-child(2) { border-color: #00ffae; } /* verde neon */
     .pack:nth-child(3) { border-color: #9d00ff; } /* viola neon */
@@ -63,7 +63,6 @@
       border-radius: 10px;
       margin-bottom: 15px;
       transition: transform 0.3s ease;
-      overflow: hidden;
     }
     .pack-title {
       font-size: 20px;
@@ -96,23 +95,24 @@
       height: 100%;
       object-fit: cover;
     }
-    .side-text-pack-left, .side-text-pack-right, .side-text-video-left, .side-text-video-right {
+    .side-text-pack-left, .side-text-pack-right, .side-text-video-left, .side-text-video-right,
+    .side-text-top-left, .side-text-top-right {
       position: absolute;
       width: 220px;
-      font-family: 'Dancing Script', cursive;
-      font-size: 22px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
       color: #eeeeee;
-      top: 50%;
-      transform: translateY(-50%);
       line-height: 1.6;
       text-align: center;
     }
-    .side-text-pack-left { left: 20px; }
-    .side-text-pack-right { right: 20px; }
-    .side-text-video-left { left: 20px; margin-top: 600px; }
-    .side-text-video-right { right: 20px; margin-top: 600px; }
+    .side-text-pack-left { left: 20px; top: 55%; transform: translateY(-50%); }
+    .side-text-pack-right { right: 20px; top: 55%; transform: translateY(-50%); }
+    .side-text-video-left { left: 20px; top: 110%; transform: translateY(-50%); }
+    .side-text-video-right { right: 20px; top: 110%; transform: translateY(-50%); }
+    .side-text-top-left { left: 20px; top: 5%; }
+    .side-text-top-right { right: 20px; top: 5%; }
     .carousel {
-      margin-top: 80px;
+      margin-top: 100px;
       overflow: hidden;
       white-space: nowrap;
       padding: 20px 0;
@@ -122,12 +122,11 @@
       animation: scroll 100s linear infinite;
     }
     .carousel img {
-      height: 180px;
+      height: 220px;
       margin: 0 10px;
       border-radius: 12px;
       border: 2px solid #00bfff;
       transition: transform 0.3s ease;
-      overflow: hidden;
     }
     .carousel img:hover {
       transform: scale(1.5);
@@ -165,6 +164,13 @@
 </header>
 
 <div class="packs-container">
+  <div class="side-text-top-left">
+    Tutto inizia da un'immagine.
+  </div>
+  <div class="side-text-top-right">
+    Tutto diventa possibile con un'idea.
+  </div>
+
   <div class="side-text-pack-left">
     Ogni idea merita di diventare leggenda. Parti da qui.
   </div>
@@ -202,14 +208,14 @@
   <div class="side-text-pack-right">
     Disegna il tuo mondo. Nessuno può immaginarlo meglio di te.
   </div>
-</div>
 
-<div class="side-text-video-left">
-  Una storia potente nasce da un semplice primo fotogramma.
-</div>
+  <div class="side-text-video-left">
+    Una storia potente nasce da un semplice primo fotogramma.
+  </div>
 
-<div class="side-text-video-right">
-  Non creare solo per stupire: crea per lasciare il segno.
+  <div class="side-text-video-right">
+    Non creare solo per stupire: crea per lasciare il segno.
+  </div>
 </div>
 
 <div class="carousel">
