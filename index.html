@@ -14,7 +14,6 @@
       color: #e0e0e0;
       background-attachment: fixed;
     }
-
     header {
       text-align: center;
       padding: 50px 20px 20px;
@@ -34,17 +33,14 @@
       font-style: italic;
       margin-bottom: 40px;
     }
-
     .packs-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
       padding: 20px;
-      position: relative
-</div>
+      position: relative;
     }
-
     .pack {
       background: #111111;
       border: 2px solid #00bfff;
@@ -56,95 +52,77 @@
       text-decoration: none;
       color: inherit;
       overflow: visible;
-      margin-bottom: 40px; /* Aggiunto per staccare bene ogni pack */
+      margin-bottom: 40px;
     }
-
     .pack-green { border-color: #00ffae; }
     .pack-purple { border-color: #9d00ff; }
     .pack-blue { border-color: #00bfff; }
-
     .pack:hover {
       transform: scale(1.05);
     }
-
     .pack img {
       max-width: 100%;
       border-radius: 10px;
-      margin-bottom: 20px; /* Aggiunto spazio tra immagine e video */
+      margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
-
     .video-box {
       width: 300px;
       height: 500px;
       overflow: hidden;
       border-radius: 12px;
       transition: transform 0.3s ease;
-      margin-top: 20px; /* aggiunto margine sopra il video */
+      margin-top: 20px;
     }
-
     .video-box:hover {
       transform: scale(1.05);
     }
-
     .video-box video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .side-text-pack-left {
-  position: absolute;
-  left: 20px;
-  top: 20%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  line-height: 1.6;
-  text-align: center;
-  width: 220px;
-}
-
-.side-text-pack-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  line-height: 1.6;
-  text-align: center;
-  width: 220px;
-}
-
-.side-text-video-left {
-  position: absolute;
-  left: 20px;
-  top: 80%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  line-height: 1.6;
-  text-align: center;
-  width: 220px;
-}
-
-.side-text-video-right,
-.side-text-top-left,
-.side-text-top-right {
-  display: none;
-}
-
-
-    .side-text-pack-left { left: 20px; top: 55%; transform: translateY(-50%); }
-    .side-text-pack-right { right: 20px; top: 55%; transform: translateY(-50%); }
-    .side-text-video-left { left: 20px; top: 81%; transform: translateY(-50%); }
-    .side-text-video-right { right: 20px; top: 81%; transform: translateY(-50%); }
-    .side-text-top-left { left: 20px; top: 5%; }
-    .side-text-top-right { right: 20px; top: 5%; }
+      position: absolute;
+      left: 20px;
+      top: 20%;
+      transform: translateY(-50%);
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      line-height: 1.6;
+      text-align: center;
+      width: 220px;
+    }
+    .side-text-pack-right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      line-height: 1.6;
+      text-align: center;
+      width: 220px;
+    }
+    .side-text-video-left {
+      position: absolute;
+      left: 20px;
+      top: 80%;
+      transform: translateY(-50%);
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      line-height: 1.6;
+      text-align: center;
+      width: 220px;
+    }
+    .side-text-video-right,
+    .side-text-top-left,
+    .side-text-top-right {
+      display: none;
+    }
     .carousel {
       margin-top: 100px;
       overflow: hidden;
@@ -153,13 +131,11 @@
       position: relative;
       z-index: 1;
     }
-
     .carousel-track {
       display: inline-flex;
       animation: scroll 100s linear infinite;
       will-change: transform;
     }
-
     .carousel img {
       height: 240px;
       margin: 0 10px;
@@ -167,24 +143,20 @@
       border: 4px solid #00bfff;
       transition: transform 0.3s ease;
     }
-
     .carousel img:hover {
       transform: scale(1.1);
       z-index: 5;
     }
-
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
     .motivational-text {
       text-align: center;
       padding: 20px;
       margin: 40px auto;
       max-width: 800px;
     }
-
     .motivational-text p {
       font-family: 'Raleway', sans-serif;
       font-size: 22px;
@@ -193,41 +165,32 @@
       line-height: 1.8;
       word-break: break-word;
     }
-
     .motivational-text p strong {
       color: #00bfff;
     }
-
     footer {
       text-align: center;
       width: 100%;
       margin-top: 40px;
       padding: 20px;
     }
-
     footer p {
-      text-align: center;
-      width: 100%;
       font-size: 14px;
       color: #cccccc;
       margin-bottom: 10px;
     }
-
     .policies {
       font-size: 12px;
       margin-top: 10px;
     }
-
     .policies a {
       color: #00bfff;
       text-decoration: none;
       margin: 0 5px;
     }
-
     .policies a:hover {
       text-decoration: underline;
     }
-
     .full-policies {
       margin-top: 20px;
       font-size: 10px;
@@ -239,77 +202,57 @@
       text-align: left;
       line-height: 1.6;
     }
-
     .full-policies p {
       margin: 8px 0;
     }
-
     @media (max-width: 768px) {
-  header {
-    padding: 30px 10px 10px;
-  }
-
-  h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
-  }
-
-  p.subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .packs-container {
-    padding: 10px;
-    gap: 20px;
-  }
-
-  .side-text-pack-left,
-  .side-text-pack-right,
-  .side-text-video-left,
-  .side-text-video-right,
-  .side-text-top-left,
-  .side-text-top-right {
-    font-size: 14px; /* RIDOTTO il font */
-    margin: 5px 0;   /* RIDOTTO margine */
-    padding: 0 10px; /* PICCOLO padding laterale */
-    text-align: center;
-    position: relative; /* NON più assoluto */
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
-    width: 100%; /* Così le scritte si adattano bene */
-  }
-
-  .pack {
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-
-  .video-box {
-    margin-top: 10px;
-  }
-
-  .motivational-text {
-    margin: 20px auto;
-    padding: 10px;
-  }
-
-  footer {
-    margin-top: 20px;
-    padding: 10px;
-  }
-
-  .policies {
-    margin-top: 5px;
-  }
-
-  .full-policies {
-    margin-top: 10px;
-    padding: 0 10px;
-  }
-}
+      header {
+        padding: 30px 10px 10px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+      p.subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .packs-container {
+        padding: 10px;
+        gap: 20px;
+      }
+      .side-text-pack-left,
+      .side-text-pack-right,
+      .side-text-video-left {
+        font-size: 14px;
+        margin: 5px 0;
+        padding: 0 10px;
+        text-align: center;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+      }
+      .pack {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .video-box {
+        margin-top: 10px;
+      }
+      .motivational-text p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      footer p {
+        font-size: 12px;
+      }
+      .full-policies {
+        padding: 0 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -320,9 +263,8 @@
 </header>
 
 <div class="packs-container">
-  <div class="side-text-top-left">Tutto inizia da un'immagine.</div>
-  <div class="side-text-top-right">Tutto diventa possibile con un'idea.</div>
-  <div class="side-text-pack-left">Ogni idea merita di diventare leggenda. Parti da qui.</div>
+  <div class="side-text-pack-left">Tutto inizia da un'immagine.</div>
+  <div class="side-text-pack-right">Tutto diventa possibile con un'idea.</div>
 
   <a class="pack pack-green" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
     <img src="images/character_forge.png" alt="Character Forge">
@@ -354,16 +296,17 @@
     </div>
   </a>
 
-  <div class="side-text-pack-right">Disegna il tuo mondo. Nessuno può immaginarlo meglio di te.</div>
-  <div class="side-text-video-left">Una storia potente nasce da un semplice primo fotogramma.</div>
-  <div class="side-text-video-right">Non creare solo per stupire: crea per lasciare il segno.</div>
+  <div class="side-text-video-left">Disegna il tuo mondo. Nessuno può immaginarlo meglio di te.</div>
 </div>
-  <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
+
+<!-- SCRITTA PAGAMENTO -->
+<div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
   Possibilità di pagamento in due rate
 </div>
+<!-- FINE SCRITTA PAGAMENTO -->
 <div class="carousel">
   <div class="carousel-track">
-    <!-- 50 immagini + 50 duplicate -->
+    <!-- Le immagini del carosello -->
     <img src="carousel/1.jpg" alt="1">
     <img src="carousel/2.jpg" alt="2">
     <img src="carousel/3.jpg" alt="3">
@@ -415,57 +358,57 @@
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
 
-    <!-- duplicate per loop fluido -->
-    <img src="carousel/1.jpg" alt="1 duplicate">
-    <img src="carousel/2.jpg" alt="2 duplicate">
-    <img src="carousel/3.jpg" alt="3 duplicate">
-    <img src="carousel/4.jpg" alt="4 duplicate">
-    <img src="carousel/5.jpg" alt="5 duplicate">
-    <img src="carousel/6.jpg" alt="6 duplicate">
-    <img src="carousel/7.jpg" alt="7 duplicate">
-    <img src="carousel/8.jpg" alt="8 duplicate">
-    <img src="carousel/9.jpg" alt="9 duplicate">
-    <img src="carousel/10.jpg" alt="10 duplicate">
-    <img src="carousel/11.jpg" alt="11 duplicate">
-    <img src="carousel/12.jpg" alt="12 duplicate">
-    <img src="carousel/13.jpg" alt="13 duplicate">
-    <img src="carousel/14.jpg" alt="14 duplicate">
-    <img src="carousel/15.jpg" alt="15 duplicate">
-    <img src="carousel/16.jpg" alt="16 duplicate">
-    <img src="carousel/17.jpg" alt="17 duplicate">
-    <img src="carousel/18.jpg" alt="18 duplicate">
-    <img src="carousel/19.jpg" alt="19 duplicate">
-    <img src="carousel/20.jpg" alt="20 duplicate">
-    <img src="carousel/21.jpg" alt="21 duplicate">
-    <img src="carousel/22.jpg" alt="22 duplicate">
-    <img src="carousel/23.jpg" alt="23 duplicate">
-    <img src="carousel/24.jpg" alt="24 duplicate">
-    <img src="carousel/25.jpg" alt="25 duplicate">
-    <img src="carousel/26.jpg" alt="26 duplicate">
-    <img src="carousel/27.jpg" alt="27 duplicate">
-    <img src="carousel/28.jpg" alt="28 duplicate">
-    <img src="carousel/29.jpg" alt="29 duplicate">
-    <img src="carousel/30.jpg" alt="30 duplicate">
-    <img src="carousel/31.jpg" alt="31 duplicate">
-    <img src="carousel/32.jpg" alt="32 duplicate">
-    <img src="carousel/33.jpg" alt="33 duplicate">
-    <img src="carousel/34.jpg" alt="34 duplicate">
-    <img src="carousel/35.jpg" alt="35 duplicate">
-    <img src="carousel/36.jpg" alt="36 duplicate">
-    <img src="carousel/37.jpg" alt="37 duplicate">
-    <img src="carousel/38.jpg" alt="38 duplicate">
-    <img src="carousel/39.jpg" alt="39 duplicate">
-    <img src="carousel/40.jpg" alt="40 duplicate">
-    <img src="carousel/41.jpg" alt="41 duplicate">
-    <img src="carousel/42.jpg" alt="42 duplicate">
-    <img src="carousel/43.jpg" alt="43 duplicate">
-    <img src="carousel/44.jpg" alt="44 duplicate">
-    <img src="carousel/45.jpg" alt="45 duplicate">
-    <img src="carousel/46.jpg" alt="46 duplicate">
-    <img src="carousel/47.jpg" alt="47 duplicate">
-    <img src="carousel/48.jpg" alt="48 duplicate">
-    <img src="carousel/49.jpg" alt="49 duplicate">
-    <img src="carousel/50.jpg" alt="50 duplicate">
+    <!-- duplicate per effetto infinito -->
+    <<img src="carousel/1.jpg" alt="1-duplicate">
+<img src="carousel/2.jpg" alt="2-duplicate">
+<img src="carousel/3.jpg" alt="3-duplicate">
+<img src="carousel/4.jpg" alt="4-duplicate">
+<img src="carousel/5.jpg" alt="5-duplicate">
+<img src="carousel/6.jpg" alt="6-duplicate">
+<img src="carousel/7.jpg" alt="7-duplicate">
+<img src="carousel/8.jpg" alt="8-duplicate">
+<img src="carousel/9.jpg" alt="9-duplicate">
+<img src="carousel/10.jpg" alt="10-duplicate">
+<img src="carousel/11.jpg" alt="11-duplicate">
+<img src="carousel/12.jpg" alt="12-duplicate">
+<img src="carousel/13.jpg" alt="13-duplicate">
+<img src="carousel/14.jpg" alt="14-duplicate">
+<img src="carousel/15.jpg" alt="15-duplicate">
+<img src="carousel/16.jpg" alt="16-duplicate">
+<img src="carousel/17.jpg" alt="17-duplicate">
+<img src="carousel/18.jpg" alt="18-duplicate">
+<img src="carousel/19.jpg" alt="19-duplicate">
+<img src="carousel/20.jpg" alt="20-duplicate">
+<img src="carousel/21.jpg" alt="21-duplicate">
+<img src="carousel/22.jpg" alt="22-duplicate">
+<img src="carousel/23.jpg" alt="23-duplicate">
+<img src="carousel/24.jpg" alt="24-duplicate">
+<img src="carousel/25.jpg" alt="25-duplicate">
+<img src="carousel/26.jpg" alt="26-duplicate">
+<img src="carousel/27.jpg" alt="27-duplicate">
+<img src="carousel/28.jpg" alt="28-duplicate">
+<img src="carousel/29.jpg" alt="29-duplicate">
+<img src="carousel/30.jpg" alt="30-duplicate">
+<img src="carousel/31.jpg" alt="31-duplicate">
+<img src="carousel/32.jpg" alt="32-duplicate">
+<img src="carousel/33.jpg" alt="33-duplicate">
+<img src="carousel/34.jpg" alt="34-duplicate">
+<img src="carousel/35.jpg" alt="35-duplicate">
+<img src="carousel/36.jpg" alt="36-duplicate">
+<img src="carousel/37.jpg" alt="37-duplicate">
+<img src="carousel/38.jpg" alt="38-duplicate">
+<img src="carousel/39.jpg" alt="39-duplicate">
+<img src="carousel/40.jpg" alt="40-duplicate">
+<img src="carousel/41.jpg" alt="41-duplicate">
+<img src="carousel/42.jpg" alt="42-duplicate">
+<img src="carousel/43.jpg" alt="43-duplicate">
+<img src="carousel/44.jpg" alt="44-duplicate">
+<img src="carousel/45.jpg" alt="45-duplicate">
+<img src="carousel/46.jpg" alt="46-duplicate">
+<img src="carousel/47.jpg" alt="47-duplicate">
+<img src="carousel/48.jpg" alt="48-duplicate">
+<img src="carousel/49.jpg" alt="49-duplicate">
+<img src="carousel/50.jpg" alt="50-duplicate">
   </div>
 </div>
 
@@ -482,9 +425,9 @@
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
 
   <div class="policies">
-    <a href="#">Privacy Policy</a> | 
-    <a href="#">Termini e Condizioni</a> | 
-    <a href="#">Cookie Policy</a>
+    <a href="javascript:void(0);">Privacy Policy</a> |
+    <a href="javascript:void(0);">Termini e Condizioni</a> |
+    <a href="javascript:void(0);">Cookie Policy</a>
   </div>
 
   <div class="full-policies">
@@ -493,10 +436,10 @@
     <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
     <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
   </div>
-  <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 16px; color: #888;">
-  © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
-</div>
 
+  <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #555;">
+    © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
+  </div>
 </footer>
 
 </body>
