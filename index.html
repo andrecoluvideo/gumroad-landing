@@ -6,6 +6,52 @@
   <title>Creazione Personaggi - Andrea Colucci</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway:wght@700&display=swap" rel="stylesheet">
   <style>
+@media (max-width: 768px) {
+  /* Cambia il layout dei packs */
+  .packs-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Adatta i video */
+  .video-box {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Riduci l'altezza delle immagini nel carosello */
+  .carousel img {
+    height: 180px; /* Riduci l'altezza delle immagini nel carosello */
+  }
+
+  /* Testo motivazionale più piccolo su mobile */
+  .motivational-text {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* Aumenta la larghezza dei pack */
+  .pack {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Modifica il layout delle scritte laterali */
+  .side-text-pack-left, .side-text-pack-right, .side-text-video-left, .side-text-video-right {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Testo laterale più vicino ai pack */
+  .side-text-pack-left, .side-text-pack-right {
+    top: auto;
+    transform: translateY(0);
+  }
+}
+
     body {
       margin: 0;
       background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><line x1="0" y1="200" x2="200" y2="0" stroke="%23330000" stroke-opacity="0.15" stroke-width="1"/></svg>') repeat;
