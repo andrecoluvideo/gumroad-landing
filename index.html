@@ -233,7 +233,16 @@
   .side-text-video-right,
   .side-text-top-left,
   .side-text-top-right {
-    margin: 10px 0;
+    font-size: 14px; /* RIDOTTO il font */
+    margin: 5px 0;   /* RIDOTTO margine */
+    padding: 0 10px; /* PICCOLO padding laterale */
+    text-align: center;
+    position: relative; /* NON più assoluto */
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%; /* Così le scritte si adattano bene */
   }
 
   .pack {
