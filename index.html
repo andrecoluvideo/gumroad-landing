@@ -122,6 +122,12 @@
     .carousel-track {
       display: inline-flex;
       animation: scroll 100s linear infinite;
+will-change: transform;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused !important;
+}
     }
     .carousel img {
   height: 240px;
