@@ -42,7 +42,7 @@
     }
     .pack {
       background: #111111;
-      border: 2px solid transparent;
+      border: 2px solid #00bfff;
       border-radius: 12px;
       padding: 20px;
       width: 300px;
@@ -52,9 +52,9 @@
       color: inherit;
       overflow: visible;
     }
-    .pack:nth-child(2) { border: 2px solid #00ffae; } /* Verde neon */
-    .pack:nth-child(3) { border: 2px solid #9d00ff; } /* Viola neon */
-    .pack:nth-child(4) { border: 2px solid #00bfff; } /* Blu neon */
+    .pack-green { border-color: #00ffae; }
+    .pack-purple { border-color: #9d00ff; }
+    .pack-blue { border-color: #00bfff; }
     .pack:hover {
       transform: scale(1.05);
     }
@@ -129,11 +129,12 @@
       border-radius: 12px;
       border: 2px solid #00bfff;
       transition: transform 0.3s ease;
+      position: relative;
       overflow: visible;
     }
     .carousel img:hover {
       transform: scale(1.5);
-      z-index: 2;
+      z-index: 5;
     }
     .carousel:hover .carousel-track {
       animation-play-state: paused;
@@ -179,7 +180,7 @@
     Ogni idea merita di diventare leggenda. Parti da qui.
   </div>
 
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
+  <a class="pack pack-green" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
     <img src="images/character_forge.png" alt="Character Forge">
     <div class="pack-title">Character Forge Legend Pack</div>
     <div class="pack-price">19,90€</div>
@@ -189,7 +190,7 @@
     </div>
   </a>
 
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
+  <a class="pack pack-purple" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
     <img src="images/elite_pack.png" alt="Elite Characters">
     <div class="pack-title">Elite Characters</div>
     <div class="pack-price">29,90€</div>
@@ -199,7 +200,7 @@
     </div>
   </a>
 
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
+  <a class="pack pack-blue" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
     <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
     <div class="pack-title">PromptMagnet Infinite Edition</div>
     <div class="pack-price">50€</div>
