@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrea Colucci - Pack Store</title>
+  <title>Creazione Personaggi - Andrea Colucci</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background: #0a0a0a url('background-lines.png') repeat;
-      background-size: contain;
+      background-size: cover;
       font-family: 'Helvetica Neue', sans-serif;
       color: #e0e0e0;
     }
@@ -30,33 +30,14 @@
       font-size: 18px;
       color: #cccccc;
       font-style: italic;
-    }
-    .videos-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 20px;
-    }
-    .video-box {
-      width: 300px;
-      height: 500px;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,191,255,0.5);
-    }
-    .video-box video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      margin-bottom: 40px;
     }
     .packs-container {
       display: flex;
       justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
-      margin: 20px;
+      gap: 40px;
+      padding: 20px;
     }
     .pack {
       background: #111111;
@@ -71,18 +52,36 @@
     .pack:hover {
       transform: scale(1.05);
     }
+    .pack img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
     .pack-title {
       font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .pack-desc {
-      font-size: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     .pack-price {
       font-weight: bold;
       font-size: 16px;
       color: #00bfff;
+      margin-bottom: 10px;
+    }
+    .pack-desc {
+      font-size: 14px;
+      color: #cccccc;
+    }
+    .video-box {
+      width: 300px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .carousel {
       margin-top: 50px;
@@ -106,43 +105,51 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 50px 0 20px;
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>CREA. DOMINA. ISPIRA.</h1>
-  <p class="subtitle">Costruisci il tuo mondo visivo. Diventa il protagonista.</p>
+  <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
 </header>
 
-<div class="videos-container">
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
-  </div>
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
-  </div>
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
-  </div>
-</div>
-
 <div class="packs-container">
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" style="box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);">
+  <div class="pack">
+    <img src="images/character_forge.png" alt="Character Forge">
     <div class="pack-title">Character Forge Legend Pack</div>
-    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
     <div class="pack-price">19,90€</div>
-  </a>
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" style="box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);">
+    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
+    </div>
+  </div>
+
+  <div class="pack">
+    <img src="images/elite_pack.png" alt="Elite Characters">
     <div class="pack-title">Elite Characters</div>
-    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
     <div class="pack-price">29,90€</div>
-  </a>
-  <a class="pack" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" style="box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
+    </div>
+  </div>
+
+  <div class="pack">
+    <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
     <div class="pack-title">PromptMagnet Infinite Edition</div>
-    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
     <div class="pack-price">50€</div>
-  </a>
+    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
+    </div>
+  </div>
 </div>
 
 <div class="carousel">
@@ -157,9 +164,22 @@
     <img src="carousel/8.jpg" alt="">
     <img src="carousel/9.jpg" alt="">
     <img src="carousel/10.jpg" alt="">
-    <!-- Qui poi aggiungerai tu da 11.jpg a 20.jpg -->
+    <img src="carousel/11.jpg" alt="">
+    <img src="carousel/12.jpg" alt="">
+    <img src="carousel/13.jpg" alt="">
+    <img src="carousel/14.jpg" alt="">
+    <img src="carousel/15.jpg" alt="">
+    <img src="carousel/16.jpg" alt="">
+    <img src="carousel/17.jpg" alt="">
+    <img src="carousel/18.jpg" alt="">
+    <img src="carousel/19.jpg" alt="">
+    <img src="carousel/20.jpg" alt="">
   </div>
 </div>
+
+<footer>
+  + Visite reali in tempo reale - Powered by Counter.dev
+</footer>
 
 </body>
 </html>
