@@ -52,9 +52,9 @@
       color: inherit;
       overflow: visible;
     }
-    .pack:nth-child(2) { border-color: #00ffae; } /* verde neon */
-    .pack:nth-child(3) { border-color: #9d00ff; } /* viola neon */
-    .pack:nth-child(4) { border-color: #00bfff; } /* blu neon */
+    .pack:nth-child(2) { border: 2px solid #00ffae; } /* Verde neon */
+    .pack:nth-child(3) { border: 2px solid #9d00ff; } /* Viola neon */
+    .pack:nth-child(4) { border: 2px solid #00bfff; } /* Blu neon */
     .pack:hover {
       transform: scale(1.05);
     }
@@ -107,8 +107,8 @@
     }
     .side-text-pack-left { left: 20px; top: 55%; transform: translateY(-50%); }
     .side-text-pack-right { right: 20px; top: 55%; transform: translateY(-50%); }
-    .side-text-video-left { left: 20px; top: 81%; transform: translateY(-50%); }
-    .side-text-video-right { right: 20px; top: 81%; transform: translateY(-50%); }
+    .side-text-video-left { left: 20px; top: 87%; transform: translateY(-50%); }
+    .side-text-video-right { right: 20px; top: 87%; transform: translateY(-50%); }
     .side-text-top-left { left: 20px; top: 5%; }
     .side-text-top-right { right: 20px; top: 5%; }
     .carousel {
@@ -116,23 +116,24 @@
       overflow: hidden;
       white-space: nowrap;
       padding: 20px 0;
+      position: relative;
+      z-index: 1;
     }
     .carousel-track {
       display: inline-flex;
       animation: scroll 100s linear infinite;
     }
     .carousel img {
-      height: 220px;
+      height: 240px;
       margin: 0 10px;
       border-radius: 12px;
       border: 2px solid #00bfff;
       transition: transform 0.3s ease;
+      overflow: visible;
     }
     .carousel img:hover {
-  transform: scale(1.5);
-  z-index: 2;
-}
-
+      transform: scale(1.5);
+      z-index: 2;
     }
     .carousel:hover .carousel-track {
       animation-play-state: paused;
@@ -223,56 +224,58 @@
 
 <div class="carousel">
   <div class="carousel-track">
-    <img src="carousel/1.jpg" alt="">
-<img src="carousel/2.jpg" alt="">
-<img src="carousel/3.jpg" alt="">
-<img src="carousel/4.jpg" alt="">
-<img src="carousel/5.jpg" alt="">
-<img src="carousel/6.jpg" alt="">
-<img src="carousel/7.jpg" alt="">
-<img src="carousel/8.jpg" alt="">
-<img src="carousel/9.jpg" alt="">
-<img src="carousel/10.jpg" alt="">
-<img src="carousel/11.jpg" alt="">
-<img src="carousel/12.jpg" alt="">
-<img src="carousel/13.jpg" alt="">
-<img src="carousel/14.jpg" alt="">
-<img src="carousel/15.jpg" alt="">
-<img src="carousel/16.jpg" alt="">
-<img src="carousel/17.jpg" alt="">
-<img src="carousel/18.jpg" alt="">
-<img src="carousel/19.jpg" alt="">
-<img src="carousel/20.jpg" alt="">
-<img src="carousel/21.jpg" alt="">
-<img src="carousel/22.jpg" alt="">
-<img src="carousel/23.jpg" alt="">
-<img src="carousel/24.jpg" alt="">
-<img src="carousel/25.jpg" alt="">
-<img src="carousel/26.jpg" alt="">
-<img src="carousel/27.jpg" alt="">
-<img src="carousel/28.jpg" alt="">
-<img src="carousel/29.jpg" alt="">
-<img src="carousel/30.jpg" alt="">
-<img src="carousel/31.jpg" alt="">
-<img src="carousel/32.jpg" alt="">
-<img src="carousel/33.jpg" alt="">
-<img src="carousel/34.jpg" alt="">
-<img src="carousel/35.jpg" alt="">
-<img src="carousel/36.jpg" alt="">
-<img src="carousel/37.jpg" alt="">
-<img src="carousel/38.jpg" alt="">
-<img src="carousel/39.jpg" alt="">
-<img src="carousel/40.jpg" alt="">
-<img src="carousel/41.jpg" alt="">
-<img src="carousel/42.jpg" alt="">
-<img src="carousel/43.jpg" alt="">
-<img src="carousel/44.jpg" alt="">
-<img src="carousel/45.jpg" alt="">
-<img src="carousel/46.jpg" alt="">
-<img src="carousel/47.jpg" alt="">
-<img src="carousel/48.jpg" alt="">
-<img src="carousel/49.jpg" alt="">
-<img src="carousel/50.jpg" alt="">
+    <div class="carousel-track">
+  <img src="carousel/1.jpg" alt="">
+  <img src="carousel/2.jpg" alt="">
+  <img src="carousel/3.jpg" alt="">
+  <img src="carousel/4.jpg" alt="">
+  <img src="carousel/5.jpg" alt="">
+  <img src="carousel/6.jpg" alt="">
+  <img src="carousel/7.jpg" alt="">
+  <img src="carousel/8.jpg" alt="">
+  <img src="carousel/9.jpg" alt="">
+  <img src="carousel/10.jpg" alt="">
+  <img src="carousel/11.jpg" alt="">
+  <img src="carousel/12.jpg" alt="">
+  <img src="carousel/13.jpg" alt="">
+  <img src="carousel/14.jpg" alt="">
+  <img src="carousel/15.jpg" alt="">
+  <img src="carousel/16.jpg" alt="">
+  <img src="carousel/17.jpg" alt="">
+  <img src="carousel/18.jpg" alt="">
+  <img src="carousel/19.jpg" alt="">
+  <img src="carousel/20.jpg" alt="">
+  <img src="carousel/21.jpg" alt="">
+  <img src="carousel/22.jpg" alt="">
+  <img src="carousel/23.jpg" alt="">
+  <img src="carousel/24.jpg" alt="">
+  <img src="carousel/25.jpg" alt="">
+  <img src="carousel/26.jpg" alt="">
+  <img src="carousel/27.jpg" alt="">
+  <img src="carousel/28.jpg" alt="">
+  <img src="carousel/29.jpg" alt="">
+  <img src="carousel/30.jpg" alt="">
+  <img src="carousel/31.jpg" alt="">
+  <img src="carousel/32.jpg" alt="">
+  <img src="carousel/33.jpg" alt="">
+  <img src="carousel/34.jpg" alt="">
+  <img src="carousel/35.jpg" alt="">
+  <img src="carousel/36.jpg" alt="">
+  <img src="carousel/37.jpg" alt="">
+  <img src="carousel/38.jpg" alt="">
+  <img src="carousel/39.jpg" alt="">
+  <img src="carousel/40.jpg" alt="">
+  <img src="carousel/41.jpg" alt="">
+  <img src="carousel/42.jpg" alt="">
+  <img src="carousel/43.jpg" alt="">
+  <img src="carousel/44.jpg" alt="">
+  <img src="carousel/45.jpg" alt="">
+  <img src="carousel/46.jpg" alt="">
+  <img src="carousel/47.jpg" alt="">
+  <img src="carousel/48.jpg" alt="">
+  <img src="carousel/49.jpg" alt="">
+  <img src="carousel/50.jpg" alt="">
+</div>
   </div>
 </div>
 
