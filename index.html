@@ -144,23 +144,34 @@
     }
 
     .motivational-text {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
   text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 100%;
 }
 
-.motivational-text p {
+.motivational-text .line {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 22px;
   color: #ffffff;
   margin: 10px 0;
   line-height: 1.8;
+  max-width: 800px;
 }
 
-.motivational-text p strong {
-  color: #00bfff; /* o lasciarlo bianco, come preferisci */
+.motivational-text .line strong {
+  color: #00bfff; /* o lasciarlo bianco se preferisci */
 }
+
+/* Ottimizzazione per mobile */
+@media (max-width: 768px) {
+  .motivational-text .line {
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 1.6;
+  }
+
 
 
 .policies-text {
