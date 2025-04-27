@@ -16,14 +16,7 @@ Qui trovi raccolti tutti i pack PromptMagnet, pensati per creator, freelancer, e
 ## 🎯 Pack inclusi
 - PromptMagnet INFINITE EDITION
 - PromptMagnet ELITE CHARACTERS
-- PromptMagnet Stories
-- PromptMagnet Tools (Pro & Base)
-- PromptMagnet Freelance (Pro & Base)
-- PromptMagnet Social Booster
-- PromptMagnet Starter Pack
-- Crea da Zero (Guida PDF)
-- AI per Educatori (Toolkit IA Didattico)
-- Crea Senza Limiti (Visivo – in arrivo)
+- PromptMagnet FORGE CHARACTERS
 
 
 
