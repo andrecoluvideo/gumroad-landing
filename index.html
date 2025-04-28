@@ -29,34 +29,13 @@
       100% { transform: translateX(-50%); }
     }
 
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 40px;
-      background: linear-gradient(90deg, #ff4d4d, #00bfff, #ffa500);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 10px;
-    }
-
-    p.subtitle {
-      font-size: 18px;
-      color: #cccccc;
-      font-style: italic;
-      margin-bottom: 40px;
-    }
-
     .packs-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
       padding: 20px;
+      position: relative;
     }
 
     .pack {
@@ -70,6 +49,7 @@
       text-decoration: none;
       color: inherit;
       overflow: hidden;
+      position: relative;
     }
 
     .pack-green { border-color: #00ffae; }
@@ -92,6 +72,7 @@
       width: 100%;
       display: block;
       object-fit: cover;
+      aspect-ratio: 9/16;
     }
 
     .pack-title {
@@ -103,107 +84,30 @@
     .pack-price {
       font-size: 18px;
       color: #00ffae;
-      margin-bottom: 8px;
-    }
-
-    .pack-desc {
-      font-size: 16px;
-      color: #cccccc;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .cta-button {
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       padding: 10px 20px;
       background-color: #00bfff;
-      color: white;
-      font-family: 'Raleway', sans-serif;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #007acc;
-    }
-
-    .carousel {
-      margin-top: 100px;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 20px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .carousel-track {
-      display: inline-flex;
-      animation: scroll 100s linear infinite;
-      will-change: transform;
-    }
-
-    .carousel img {
-      height: 240px;
-      margin: 0 10px;
-      border-radius: 12px;
-      border: 4px solid #00bfff;
-      transition: transform 0.3s ease;
-    }
-
-    .carousel img:hover {
-      transform: scale(1.1);
-      z-index: 5;
-    }
-
-    footer {
-      text-align: center;
-      width: 100%;
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 12px;
-      color: #cccccc;
-    }
-
-    .policies {
-      font-size: 12px;
-      margin-top: 10px;
-    }
-
-    .policies a {
-      color: #00bfff;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-
-    .policies a:hover {
-      text-decoration: underline;
-    }
-
-    .full-policies {
-      margin-top: 20px;
-      font-size: 10px;
-      color: #777777;
-      padding: 0 20px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      line-height: 1.6;
-    }
-
-    .full-policies p {
-      margin: 8px 0;
-    }
-  </style>
-</head>
-<body>
+      color: white
 <header>
   <h1>CREA. DOMINA. ISPIRA.</h1>
   <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
 </header>
 
+<!-- SCRITTE LATERALI ALTE -->
+<div style="position: absolute; left: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+  Tutto inizia da un'immagine.
+</div>
+
+<div style="position: absolute; right: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+  Tutto diventa possibile con un'idea.
+</div>
+
+<!-- PACKS -->
 <div class="packs-container">
 
   <!-- PACK 1: Character Forge -->
@@ -214,24 +118,24 @@
     </div>
     <div class="pack-title">Character Forge Legend Pack</div>
     <div class="pack-price">19,90€</div>
-    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
     <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
       Scopri il Pack
     </a>
+    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
   </div>
 
   <!-- PACK 2: Elite Characters -->
   <div class="pack pack-purple">
     <div class="media-box">
       <img src="images/elite_pack.png" alt="Elite Characters">
-      <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
+      <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
     </div>
     <div class="pack-title">Elite Characters</div>
     <div class="pack-price">29,90€</div>
-    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
     <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
       Scopri il Pack
     </a>
+    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
   </div>
 
   <!-- PACK 3: PromptMagnet Infinite -->
@@ -242,13 +146,22 @@
     </div>
     <div class="pack-title">PromptMagnet Infinite Edition</div>
     <div class="pack-price">50€</div>
-    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
     <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
       Scopri il Pack
     </a>
+    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
   </div>
 
-</div> <!-- packs-container -->
+</div> <!-- CHIUSURA packs-container -->
+
+<!-- SCRITTE LATERALI BASSE -->
+<div style="position: absolute; left: 20px; top: 1000px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+  Una foto, infinite possibilità.
+</div>
+
+<div style="position: absolute; right: 20px; top: 1000px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+  Ogni immagine ha un potere nascosto.
+</div>
 
 <!-- SCRITTA PAGAMENTO -->
 <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
@@ -360,8 +273,9 @@
     <img src="carousel/48.jpg" alt="48-dup">
     <img src="carousel/49.jpg" alt="49-dup">
     <img src="carousel/50.jpg" alt="50-dup">
-  </div>
-</div>
+  </div> <!-- CHIUSURA carousel-track -->
+</div> <!-- CHIUSURA carousel -->
+
 <!-- Motivational Text -->
 <div class="motivational-text">
   <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
@@ -377,7 +291,7 @@
 
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
 
-  <div class="policies" style="margin-top: 30px;">
+  <div class="policies">
     <a href="javascript:void(0);">Privacy Policy</a> |
     <a href="javascript:void(0);">Termini e Condizioni</a> |
     <a href="javascript:void(0);">Cookie Policy</a>
