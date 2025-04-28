@@ -87,14 +87,13 @@
     .side-text-pack-left {
       position: absolute;
       left: 20px;
-      top: 20%;
+      top: 22%;
       transform: translateY(-50%);
       font-family: 'Raleway', sans-serif;
       font-size: 18px;
       color: #eeeeee;
-      line-height: 1.6;
-      text-align: center;
       width: 220px;
+      text-align: center;
     }
     .side-text-pack-right {
       position: absolute;
@@ -104,9 +103,8 @@
       font-family: 'Raleway', sans-serif;
       font-size: 18px;
       color: #eeeeee;
-      line-height: 1.6;
-      text-align: center;
       width: 220px;
+      text-align: center;
     }
     .side-text-video-left {
       position: absolute;
@@ -116,9 +114,8 @@
       font-family: 'Raleway', sans-serif;
       font-size: 18px;
       color: #eeeeee;
-      line-height: 1.6;
-      text-align: center;
       width: 220px;
+      text-align: center;
     }
     .carousel {
       margin-top: 100px;
@@ -133,6 +130,9 @@
       animation: scroll 100s linear infinite;
       will-change: transform;
     }
+    .carousel:hover .carousel-track {
+      animation-play-state: paused;
+    }
     .carousel img {
       height: 240px;
       margin: 0 10px;
@@ -144,66 +144,10 @@
       transform: scale(1.1);
       z-index: 5;
     }
-    .side-text-pack-left {
-  position: absolute;
-  left: 20px;
-  top: 22%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  width: 220px;
-  text-align: center;
-}
-
-.side-text-pack-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  width: 220px;
-  text-align: center;
-}
-
-.side-text-video-left {
-  position: absolute;
-  left: 20px;
-  top: 80%;
-  transform: translateY(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #eeeeee;
-  width: 220px;
-  text-align: center;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .side-text-pack-left,
-  .side-text-pack-right,
-  .side-text-video-left {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
-    font-size: 14px;
-    text-align: center;
-    margin: 5px 0;
-    width: 100%;
-  }
-}
-  @keyframes scroll {
+    @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .carousel:hover .carousel-track {
-  animation-play-state: paused;
-}
-
     .motivational-text {
       text-align: center;
       padding: 20px;
@@ -359,7 +303,7 @@
 
 <div class="carousel">
   <div class="carousel-track">
-    <!-- Immagini 1-50 -->
+    <!-- immagini principali -->
     <img src="carousel/1.jpg" alt="1">
     <img src="carousel/2.jpg" alt="2">
     <img src="carousel/3.jpg" alt="3">
@@ -411,12 +355,57 @@
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
 
-    <!-- Duplicati per effetto infinito -->
+    <!-- immagini duplicate per scorrimento infinito -->
     <img src="carousel/1.jpg" alt="1-dup">
     <img src="carousel/2.jpg" alt="2-dup">
     <img src="carousel/3.jpg" alt="3-dup">
     <img src="carousel/4.jpg" alt="4-dup">
     <img src="carousel/5.jpg" alt="5-dup">
+    <img src="carousel/6.jpg" alt="6-dup">
+    <img src="carousel/7.jpg" alt="7-dup">
+    <img src="carousel/8.jpg" alt="8-dup">
+    <img src="carousel/9.jpg" alt="9-dup">
+    <img src="carousel/10.jpg" alt="10-dup">
+    <img src="carousel/11.jpg" alt="11-dup">
+    <img src="carousel/12.jpg" alt="12-dup">
+    <img src="carousel/13.jpg" alt="13-dup">
+    <img src="carousel/14.jpg" alt="14-dup">
+    <img src="carousel/15.jpg" alt="15-dup">
+    <img src="carousel/16.jpg" alt="16-dup">
+    <img src="carousel/17.jpg" alt="17-dup">
+    <img src="carousel/18.jpg" alt="18-dup">
+    <img src="carousel/19.jpg" alt="19-dup">
+    <img src="carousel/20.jpg" alt="20-dup">
+    <img src="carousel/21.jpg" alt="21-dup">
+    <img src="carousel/22.jpg" alt="22-dup">
+    <img src="carousel/23.jpg" alt="23-dup">
+    <img src="carousel/24.jpg" alt="24-dup">
+    <img src="carousel/25.jpg" alt="25-dup">
+    <img src="carousel/26.jpg" alt="26-dup">
+    <img src="carousel/27.jpg" alt="27-dup">
+    <img src="carousel/28.jpg" alt="28-dup">
+    <img src="carousel/29.jpg" alt="29-dup">
+    <img src="carousel/30.jpg" alt="30-dup">
+    <img src="carousel/31.jpg" alt="31-dup">
+    <img src="carousel/32.jpg" alt="32-dup">
+    <img src="carousel/33.jpg" alt="33-dup">
+    <img src="carousel/34.jpg" alt="34-dup">
+    <img src="carousel/35.jpg" alt="35-dup">
+    <img src="carousel/36.jpg" alt="36-dup">
+    <img src="carousel/37.jpg" alt="37-dup">
+    <img src="carousel/38.jpg" alt="38-dup">
+    <img src="carousel/39.jpg" alt="39-dup">
+    <img src="carousel/40.jpg" alt="40-dup">
+    <img src="carousel/41.jpg" alt="41-dup">
+    <img src="carousel/42.jpg" alt="42-dup">
+    <img src="carousel/43.jpg" alt="43-dup">
+    <img src="carousel/44.jpg" alt="44-dup">
+    <img src="carousel/45.jpg" alt="45-dup">
+    <img src="carousel/46.jpg" alt="46-dup">
+    <img src="carousel/47.jpg" alt="47-dup">
+    <img src="carousel/48.jpg" alt="48-dup">
+    <img src="carousel/49.jpg" alt="49-dup">
+    <img src="carousel/50.jpg" alt="50-dup">
   </div>
 </div>
 
