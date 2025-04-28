@@ -60,10 +60,12 @@
       transform: scale(1.1);
       z-index: 5;
     }
+
     header {
       text-align: center;
       padding: 50px 20px 20px;
     }
+
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 40px;
@@ -73,12 +75,14 @@
       color: transparent;
       margin-bottom: 10px;
     }
+
     p.subtitle {
       font-size: 18px;
       color: #cccccc;
       font-style: italic;
       margin-bottom: 40px;
     }
+
     .packs-container {
       display: flex;
       justify-content: center;
@@ -87,6 +91,7 @@
       padding: 20px;
       position: relative;
     }
+
     .pack {
       background: #111111;
       border: 2px solid #00bfff;
@@ -101,33 +106,40 @@
       margin-bottom: 60px;
       position: relative;
     }
+
     .pack-green { border-color: #00ffae; }
     .pack-purple { border-color: #9d00ff; }
     .pack-blue { border-color: #00bfff; }
+
     .pack:hover {
       transform: scale(1.05);
     }
+
     .pack img {
       max-width: 100%;
       border-radius: 10px;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
+
     .pack-title {
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
     }
+
     .pack-price {
       font-size: 18px;
       color: #00ffae;
       margin-bottom: 8px;
     }
+
     .pack-desc {
       font-size: 16px;
       color: #cccccc;
       margin-bottom: 15px;
     }
+
     .cta-button {
       display: inline-block;
       margin-bottom: 15px;
@@ -140,9 +152,11 @@
       border-radius: 8px;
       transition: background-color 0.3s ease;
     }
+
     .cta-button:hover {
       background-color: #007acc;
     }
+
     .video-box {
       width: 300px;
       height: 500px;
@@ -151,110 +165,19 @@
       transition: transform 0.3s ease;
       margin-top: 20px;
     }
+
     .video-box:hover {
       transform: scale(1.05);
     }
+
     .video-box video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .side-text-top-left {
-      position: absolute;
-      left: 20px;
-      top: 100px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
-    }
-    .side-text-top-right {
-      position: absolute;
-      right: 20px;
-      top: 100px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
-    }
-    .side-text-pack-left {
-      position: absolute;
-      left: 20px;
-      top: 600px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
-    }
-    .side-text-pack-right {
-      position: absolute;
-      right: 20px;
-      top: 600px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
-    }
-    .motivational-text {
-      text-align: center;
-      padding: 20px;
-      margin: 40px auto;
-      max-width: 800px;
-    }
-    .motivational-text p {
-      font-family: 'Raleway', sans-serif;
-      font-size: 22px;
-      color: #ffffff;
-      margin: 10px 0;
-      line-height: 1.8;
-      word-break: break-word;
-    }
-    .motivational-text p strong {
-      color: #00bfff;
-    }
-    footer {
-      text-align: center;
-      width: 100%;
-      margin-top: 40px;
-      padding: 20px;
-    }
-    footer p {
-      font-size: 14px;
-      color: #cccccc;
-      margin-bottom: 10px;
-    }
-    .policies {
-      font-size: 12px;
-      margin-top: 10px;
-    }
-    .policies a {
-      color: #00bfff;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-    .policies a:hover {
-      text-decoration: underline;
-    }
-    .full-policies {
-      margin-top: 20px;
-      font-size: 10px;
-      color: #777777;
-      padding: 0 20px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      line-height: 1.6;
-    }
-    .full-policies p {
-      margin: 8px 0;
-    }
+  </style>
+</head>
 <body>
-
 <header>
   <h1>CREA. DOMINA. ISPIRA.</h1>
   <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
@@ -274,7 +197,6 @@
     <div class="pack-title">Character Forge Legend Pack</div>
     <div class="pack-price">19,90€</div>
 
-    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
         Scopri il Pack
@@ -287,13 +209,13 @@
       <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
     </div>
   </a>
+
   <!-- SECONDO PACK (PURPLE) -->
   <a class="pack pack-purple" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
     <img src="images/elite_pack.png" alt="Elite Characters">
     <div class="pack-title">Elite Characters</div>
     <div class="pack-price">29,90€</div>
 
-    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
         Scopri il Pack
@@ -306,13 +228,13 @@
       <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
     </div>
   </a>
+
   <!-- TERZO PACK (BLUE) -->
   <a class="pack pack-blue" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
     <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
     <div class="pack-title">PromptMagnet Infinite Edition</div>
     <div class="pack-price">50€</div>
 
-    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
         Scopri il Pack
@@ -325,6 +247,7 @@
       <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
     </div>
   </a>
+
   <!-- TESTI LATERALI DOPO I PACK -->
   <div class="side-text-pack-left">Una foto, infinite possibilità.</div>
   <div class="side-text-pack-right">Ogni immagine ha un potere nascosto.</div>
@@ -334,9 +257,11 @@
     Possibilità di pagamento in due rate
   </div>
   <!-- FINE SCRITTA PAGAMENTO -->
+
+</div>
+
 <div class="carousel">
   <div class="carousel-track">
-    <!-- IMMAGINI ORIGINALI -->
     <img src="carousel/1.jpg" alt="1">
     <img src="carousel/2.jpg" alt="2">
     <img src="carousel/3.jpg" alt="3">
@@ -441,6 +366,7 @@
     <img src="carousel/50.jpg" alt="50-dup">
   </div>
 </div>
+
 <div class="motivational-text">
   <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
   <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
@@ -451,7 +377,7 @@
 
 <footer>
   <p style="margin-bottom: 20px; color: #00bfff;">Visite reali:</p>
-  
+
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
 
   <div class="policies" style="margin-top: 30px;">
@@ -471,3 +397,6 @@
     © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
   </div>
 </footer>
+
+</body>
+</html>
