@@ -8,371 +8,375 @@
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
 
   <style>
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: #0a0a0a;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(255,0,0,0.05) 0px,
-    rgba(255,0,0,0.05) 1px,
-    transparent 1px,
-    transparent 20px
-  );
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #e0e0e0;
-  background-attachment: fixed;
-}
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #0a0a0a;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,0,0,0.05) 0px,
+        rgba(255,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #e0e0e0;
+      background-attachment: fixed;
+    }
 
-header {
-  text-align: center;
-  padding: 50px 20px 20px;
-}
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
 
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 50px;
-  background: linear-gradient(90deg, #ff4d4d, #00bfff, #ffa500);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-bottom: 10px;
-}
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 50px;
+      background: linear-gradient(90deg, #ff4d4d, #00bfff, #ffa500);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
 
-p.subtitle {
-  font-size: 20px;
-  color: #cccccc;
-  font-style: italic;
-  margin-bottom: 40px;
-}
+    p.subtitle {
+      font-size: 20px;
+      color: #cccccc;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
 
-.packs-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 20px;
-  position: relative;
-}
+    .packs-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 20px;
+      position: relative;
+    }
 
-.pack {
-  background: #111111;
-  border: 2px solid #00bfff;
-  border-radius: 12px;
-  padding: 20px;
-  width: 320px;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.5s;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
-}
+    .pack {
+      background: #111111;
+      border: 2px solid #00bfff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.5s;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+    }
 
-.pack-green { border-color: #00ffae; }
-.pack-purple { border-color: #9d00ff; }
-.pack-blue { border-color: #00bfff; }
+    .pack-green { border-color: #00ffae; }
+    .pack-purple { border-color: #9d00ff; }
+    .pack-blue { border-color: #00bfff; }
 
-.pack:hover {
-  transform: scale(1.05);
-}
+    .pack:hover {
+      transform: scale(1.05);
+    }
 
-.media-box {
-  width: 100%;
-  margin-bottom: 5px;
-}
+    .media-box {
+      width: 100%;
+      margin-bottom: 5px;
+    }
 
-.media-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-}
+    .media-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+    }
 
-.media-box video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 9/16;
-  border-radius: 10px;
-}
+    .media-box video {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 9/16;
+      border-radius: 10px;
+    }
 
-/* --- QUI devi chiudere il media query che non avevi chiuso --- */
-@media (max-width: 768px) {
-  .side-text-top-left,
-  .side-text-top-right,
-  .side-text-pack-left,
-  .side-text-pack-right {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin: 20px auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    z-index: 10; /* Aggiunto per evitare che si sovrapponga agli altri elementi */
-  }
-} /* <-- Questa è la chiusura giusta del media query */
+    @media (max-width: 768px) {
+      .side-text-top-left,
+      .side-text-top-right,
+      .side-text-pack-left,
+      .side-text-pack-right {
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+        width: 100%;
+      }
+      
+      /* Posiziona il testo tra i pack 2 e 3 */
+      .motivational-text {
+        position: static;
+        margin-top: 40px;
+        text-align: center;
+      }
+    }
 
-/* --- Ora il carosello sarà letto bene! --- */
-.carousel {
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: 80px;
-  padding: 20px 0;
-  position: relative;
-}
+    /* --- CAROSELLO ORIZZONTALE --- */
+    .carousel {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 80px;
+      padding: 20px 0;
+      position: relative;
+    }
 
-.carousel-track {
-  display: inline-flex;
-  animation: scroll 60s linear infinite;
-  will-change: transform;
-  min-width: 200%;
-}
+    .carousel-track {
+      display: inline-flex;
+      animation: scroll 60s linear infinite;
+      will-change: transform;
+      min-width: 200%; /* Fissa il carosello orizzontale */
+    }
 
-.carousel-track img {
-  height: 220px;
-  margin: 0 10px;
-  border-radius: 12px;
-  border: 4px solid #00bfff;
-  transition: transform 0.3s ease;
-}
+    .carousel-track img {
+      height: 220px;
+      margin: 0 10px;
+      border-radius: 12px;
+      border: 4px solid #00bfff;
+      transition: transform 0.3s ease;
+    }
 
-.carousel-track img:hover {
-  transform: scale(1.1);
-  animation-play-state: paused;
-}
+    .carousel-track img:hover {
+      transform: scale(1.1);
+      animation-play-state: paused;
+    }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-
+  </style>
 </head>
+
 <body>
-<header>
-  <h1>CREA. DOMINA. ISPIRA.</h1>
-  <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
-</header>
+  <header>
+    <h1>CREA. DOMINA. ISPIRA.</h1>
+    <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
+  </header>
 
-<!-- SCRITTE LATERALI ALTE -->
-<div style="position: absolute; left: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
-  Tutto inizia da un'immagine.
-</div>
-
-<div style="position: absolute; right: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
-  Tutto diventa possibile con un'idea.
-</div>
-
-<!-- PACKS -->
-<div class="packs-container">
-
-  <!-- PACK 1: Character Forge -->
-  <div class="pack pack-green">
-    <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" style="display: block;">
-      <div class="media-box">
-        <img src="images/character_forge.png" alt="Character Forge">
-        <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
-      </div>
-    </a>
-    <div class="pack-title">Character Forge Legend Pack</div>
-    <div class="pack-price">19,90€</div>
-    <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
-      Scopri il Pack
-    </a>
-    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
+  <!-- SCRITTE LATERALI ALTE -->
+  <div style="position: absolute; left: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+    Tutto inizia da un'immagine.
   </div>
 
-  <!-- PACK 2: Elite Characters -->
-  <div class="pack pack-purple">
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" style="display: block;">
-      <div class="media-box">
-        <img src="images/elite_pack.png" alt="Elite Characters">
-        <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
-      </div>
-    </a>
-    <div class="pack-title">Elite Characters</div>
-    <div class="pack-price">29,90€</div>
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
-      Scopri il Pack
-    </a>
-    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
+  <div style="position: absolute; right: 20px; top: 400px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+    Tutto diventa possibile con un'idea.
   </div>
 
-  <!-- PACK 3: PromptMagnet Infinite -->
-  <div class="pack pack-blue">
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" style="display: block;">
-      <div class="media-box">
-        <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
-        <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
-      </div>
-    </a>
-    <div class="pack-title">PromptMagnet Infinite Edition</div>
-    <div class="pack-price">50€</div>
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
-      Scopri il Pack
-    </a>
-    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
+  <!-- PACKS -->
+  <div class="packs-container">
+
+    <!-- PACK 1: Character Forge -->
+    <div class="pack pack-green">
+      <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" style="display: block;">
+        <div class="media-box">
+          <img src="images/character_forge.png" alt="Character Forge">
+          <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
+        </div>
+      </a>
+      <div class="pack-title">Character Forge Legend Pack</div>
+      <div class="pack-price">19,90€</div>
+      <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
+        Scopri il Pack
+      </a>
+      <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
+    </div>
+
+    <!-- PACK 2: Elite Characters -->
+    <div class="pack pack-purple">
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" style="display: block;">
+        <div class="media-box">
+          <img src="images/elite_pack.png" alt="Elite Characters">
+          <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
+        </div>
+      </a>
+      <div class="pack-title">Elite Characters</div>
+      <div class="pack-price">29,90€</div>
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
+        Scopri il Pack
+      </a>
+      <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
+    </div>
+
+    <!-- PACK 3: PromptMagnet Infinite -->
+    <div class="pack pack-blue">
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" style="display: block;">
+        <div class="media-box">
+          <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
+          <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
+        </div>
+      </a>
+      <div class="pack-title">PromptMagnet Infinite Edition</div>
+      <div class="pack-price">50€</div>
+      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
+        Scopri il Pack
+      </a>
+      <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
+    </div>
+
+  </div> <!-- CHIUSURA packs-container -->
+
+  <!-- SCRITTE LATERALI BASSE -->
+  <div style="position: absolute; left: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+    Una foto, infinite possibilità.
   </div>
 
-</div> <!-- CHIUSURA packs-container -->
-<!-- SCRITTE LATERALI BASSE -->
-<div style="position: absolute; left: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
-  Una foto, infinite possibilità.
-</div>
-
-<div style="position: absolute; right: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
-  Ogni immagine ha un potere nascosto.
-</div>
-
-<!-- SCRITTA PAGAMENTO -->
-<div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
-  Possibilità di pagamento in due rate
-</div>
-
-<!-- CAROSELLO ORIZZONTALE -->
-<div class="carousel">
-   <div class="carousel-track">
-    <img src="carousel/1.jpg" alt="1">
-    <img src="carousel/2.jpg" alt="2">
-    <img src="carousel/3.jpg" alt="3">
-    <img src="carousel/4.jpg" alt="4">
-    <img src="carousel/5.jpg" alt="5">
-    <img src="carousel/6.jpg" alt="6">
-    <img src="carousel/7.jpg" alt="7">
-    <img src="carousel/8.jpg" alt="8">
-    <img src="carousel/9.jpg" alt="9">
-    <img src="carousel/10.jpg" alt="10">
-    <img src="carousel/11.jpg" alt="11">
-    <img src="carousel/12.jpg" alt="12">
-    <img src="carousel/13.jpg" alt="13">
-    <img src="carousel/14.jpg" alt="14">
-    <img src="carousel/15.jpg" alt="15">
-    <img src="carousel/16.jpg" alt="16">
-    <img src="carousel/17.jpg" alt="17">
-    <img src="carousel/18.jpg" alt="18">
-    <img src="carousel/19.jpg" alt="19">
-    <img src="carousel/20.jpg" alt="20">
-    <img src="carousel/21.jpg" alt="21">
-    <img src="carousel/22.jpg" alt="22">
-    <img src="carousel/23.jpg" alt="23">
-    <img src="carousel/24.jpg" alt="24">
-    <img src="carousel/25.jpg" alt="25">
-    <img src="carousel/26.jpg" alt="26">
-    <img src="carousel/27.jpg" alt="27">
-    <img src="carousel/28.jpg" alt="28">
-    <img src="carousel/29.jpg" alt="29">
-    <img src="carousel/30.jpg" alt="30">
-    <img src="carousel/31.jpg" alt="31">
-    <img src="carousel/32.jpg" alt="32">
-    <img src="carousel/33.jpg" alt="33">
-    <img src="carousel/34.jpg" alt="34">
-    <img src="carousel/35.jpg" alt="35">
-    <img src="carousel/36.jpg" alt="36">
-    <img src="carousel/37.jpg" alt="37">
-    <img src="carousel/38.jpg" alt="38">
-    <img src="carousel/39.jpg" alt="39">
-    <img src="carousel/40.jpg" alt="40">
-    <img src="carousel/41.jpg" alt="41">
-    <img src="carousel/42.jpg" alt="42">
-    <img src="carousel/43.jpg" alt="43">
-    <img src="carousel/44.jpg" alt="44">
-    <img src="carousel/45.jpg" alt="45">
-    <img src="carousel/46.jpg" alt="46">
-    <img src="carousel/47.jpg" alt="47">
-    <img src="carousel/48.jpg" alt="48">
-    <img src="carousel/49.jpg" alt="49">
-    <img src="carousel/50.jpg" alt="50">
-<!-- DUPLICATI PER LOOP INFINITO -->
-    <img src="carousel/1.jpg" alt="1-dup">
-    <img src="carousel/2.jpg" alt="2-dup">
-    <img src="carousel/3.jpg" alt="3-dup">
-    <img src="carousel/4.jpg" alt="4-dup">
-    <img src="carousel/5.jpg" alt="5-dup">
-    <img src="carousel/6.jpg" alt="6-dup">
-    <img src="carousel/7.jpg" alt="7-dup">
-    <img src="carousel/8.jpg" alt="8-dup">
-    <img src="carousel/9.jpg" alt="9-dup">
-    <img src="carousel/10.jpg" alt="10-dup">
-    <img src="carousel/11.jpg" alt="11-dup">
-    <img src="carousel/12.jpg" alt="12-dup">
-    <img src="carousel/13.jpg" alt="13-dup">
-    <img src="carousel/14.jpg" alt="14-dup">
-    <img src="carousel/15.jpg" alt="15-dup">
-    <img src="carousel/16.jpg" alt="16-dup">
-    <img src="carousel/17.jpg" alt="17-dup">
-    <img src="carousel/18.jpg" alt="18-dup">
-    <img src="carousel/19.jpg" alt="19-dup">
-    <img src="carousel/20.jpg" alt="20-dup">
-    <img src="carousel/21.jpg" alt="21-dup">
-    <img src="carousel/22.jpg" alt="22-dup">
-    <img src="carousel/23.jpg" alt="23-dup">
-    <img src="carousel/24.jpg" alt="24-dup">
-    <img src="carousel/25.jpg" alt="25-dup">
-    <img src="carousel/26.jpg" alt="26-dup">
-    <img src="carousel/27.jpg" alt="27-dup">
-    <img src="carousel/28.jpg" alt="28-dup">
-    <img src="carousel/29.jpg" alt="29-dup">
-    <img src="carousel/30.jpg" alt="30-dup">
-    <img src="carousel/31.jpg" alt="31-dup">
-    <img src="carousel/32.jpg" alt="32-dup">
-    <img src="carousel/33.jpg" alt="33-dup">
-    <img src="carousel/34.jpg" alt="34-dup">
-    <img src="carousel/35.jpg" alt="35-dup">
-    <img src="carousel/36.jpg" alt="36-dup">
-    <img src="carousel/37.jpg" alt="37-dup">
-    <img src="carousel/38.jpg" alt="38-dup">
-    <img src="carousel/39.jpg" alt="39-dup">
-    <img src="carousel/40.jpg" alt="40-dup">
-    <img src="carousel/41.jpg" alt="41-dup">
-    <img src="carousel/42.jpg" alt="42-dup">
-    <img src="carousel/43.jpg" alt="43-dup">
-    <img src="carousel/44.jpg" alt="44-dup">
-    <img src="carousel/45.jpg" alt="45-dup">
-    <img src="carousel/46.jpg" alt="46-dup">
-    <img src="carousel/47.jpg" alt="47-dup">
-    <img src="carousel/48.jpg" alt="48-dup">
-    <img src="carousel/49.jpg" alt="49-dup">
-    <img src="carousel/50.jpg" alt="50-dup">
- </div> <!-- CHIUSURA carousel-track -->
-</div> <!-- CHIUSURA carousel -->
-<!-- Motivational Text -->
-<div class="motivational-text" style="text-align: center; margin: 60px auto; max-width: 800px;">
-  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
-  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
-  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
-  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
-  <p style="font-size: 22px; color: #00bfff; margin: 10px 0; line-height: 1.8;"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
-</div>
-
-<!-- Footer -->
-<footer style="text-align: center; width: 100%; margin-top: 50px; padding: 20px;">
-  <p style="margin-bottom: 20px; color: #00bfff; font-size: 16px;">Visite reali:</p>
-
-  <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
-
-  <div class="policies" style="font-size: 12px; margin-top: 30px;">
-    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Privacy Policy</a> |
-    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Termini e Condizioni</a> |
-    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Cookie Policy</a>
+  <div style="position: absolute; right: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+    Ogni immagine ha un potere nascosto.
   </div>
 
-  <div class="full-policies" style="margin-top: 20px; font-size: 10px; color: #777777; padding: 0 20px; max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.6;">
-    <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
-    <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
-    <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
-    <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
+  <!-- SCRITTA PAGAMENTO -->
+  <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
+    Possibilità di pagamento in due rate
   </div>
 
-  <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
-    © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
+  <!-- CAROSELLO ORIZZONTALE -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="carousel/1.jpg" alt="1">
+      <img src="carousel/2.jpg" alt="2">
+      <img src="carousel/3.jpg" alt="3">
+      <img src="carousel/4.jpg" alt="4">
+      <img src="carousel/5.jpg" alt="5">
+      <img src="carousel/6.jpg" alt="6">
+      <img src="carousel/7.jpg" alt="7">
+      <img src="carousel/8.jpg" alt="8">
+      <img src="carousel/9.jpg" alt="9">
+      <img src="carousel/10.jpg" alt="10">
+      <img src="carousel/11.jpg" alt="11">
+      <img src="carousel/12.jpg" alt="12">
+      <img src="carousel/13.jpg" alt="13">
+      <img src="carousel/14.jpg" alt="14">
+      <img src="carousel/15.jpg" alt="15">
+      <img src="carousel/16.jpg" alt="16">
+      <img src="carousel/17.jpg" alt="17">
+      <img src="carousel/18.jpg" alt="18">
+      <img src="carousel/19.jpg" alt="19">
+      <img src="carousel/20.jpg" alt="20">
+      <img src="carousel/21.jpg" alt="21">
+      <img src="carousel/22.jpg" alt="22">
+      <img src="carousel/23.jpg" alt="23">
+      <img src="carousel/24.jpg" alt="24">
+      <img src="carousel/25.jpg" alt="25">
+      <img src="carousel/26.jpg" alt="26">
+      <img src="carousel/27.jpg" alt="27">
+      <img src="carousel/28.jpg" alt="28">
+      <img src="carousel/29.jpg" alt="29">
+      <img src="carousel/30.jpg" alt="30">
+      <img src="carousel/31.jpg" alt="31">
+      <img src="carousel/32.jpg" alt="32">
+      <img src="carousel/33.jpg" alt="33">
+      <img src="carousel/34.jpg" alt="34">
+      <img src="carousel/35.jpg" alt="35">
+      <img src="carousel/36.jpg" alt="36">
+      <img src="carousel/37.jpg" alt="37">
+      <img src="carousel/38.jpg" alt="38">
+      <img src="carousel/39.jpg" alt="39">
+      <img src="carousel/40.jpg" alt="40">
+      <img src="carousel/41.jpg" alt="41">
+      <img src="carousel/42.jpg" alt="42">
+      <img src="carousel/43.jpg" alt="43">
+      <img src="carousel/44.jpg" alt="44">
+      <img src="carousel/45.jpg" alt="45">
+      <img src="carousel/46.jpg" alt="46">
+      <img src="carousel/47.jpg" alt="47">
+      <img src="carousel/48.jpg" alt="48">
+      <img src="carousel/49.jpg" alt="49">
+      <img src="carousel/50.jpg" alt="50">
+      <!-- DUPLICATI PER LOOP INFINITO -->
+      <img src="carousel/1.jpg" alt="1-dup">
+      <img src="carousel/2.jpg" alt="2-dup">
+      <img src="carousel/3.jpg" alt="3-dup">
+      <img src="carousel/4.jpg" alt="4-dup">
+      <img src="carousel/5.jpg" alt="5-dup">
+      <img src="carousel/6.jpg" alt="6-dup">
+      <img src="carousel/7.jpg" alt="7-dup">
+      <img src="carousel/8.jpg" alt="8-dup">
+      <img src="carousel/9.jpg" alt="9-dup">
+      <img src="carousel/10.jpg" alt="10-dup">
+      <img src="carousel/11.jpg" alt="11-dup">
+      <img src="carousel/12.jpg" alt="12-dup">
+      <img src="carousel/13.jpg" alt="13-dup">
+      <img src="carousel/14.jpg" alt="14-dup">
+      <img src="carousel/15.jpg" alt="15-dup">
+      <img src="carousel/16.jpg" alt="16-dup">
+      <img src="carousel/17.jpg" alt="17-dup">
+      <img src="carousel/18.jpg" alt="18-dup">
+      <img src="carousel/19.jpg" alt="19-dup">
+      <img src="carousel/20.jpg" alt="20-dup">
+      <img src="carousel/21.jpg" alt="21-dup">
+      <img src="carousel/22.jpg" alt="22-dup">
+      <img src="carousel/23.jpg" alt="23-dup">
+      <img src="carousel/24.jpg" alt="24-dup">
+      <img src="carousel/25.jpg" alt="25-dup">
+      <img src="carousel/26.jpg" alt="26-dup">
+      <img src="carousel/27.jpg" alt="27-dup">
+      <img src="carousel/28.jpg" alt="28-dup">
+      <img src="carousel/29.jpg" alt="29-dup">
+      <img src="carousel/30.jpg" alt="30-dup">
+      <img src="carousel/31.jpg" alt="31-dup">
+      <img src="carousel/32.jpg" alt="32-dup">
+      <img src="carousel/33.jpg" alt="33-dup">
+      <img src="carousel/34.jpg" alt="34-dup">
+      <img src="carousel/35.jpg" alt="35-dup">
+      <img src="carousel/36.jpg" alt="36-dup">
+      <img src="carousel/37.jpg" alt="37-dup">
+      <img src="carousel/38.jpg" alt="38-dup">
+      <img src="carousel/39.jpg" alt="39-dup">
+      <img src="carousel/40.jpg" alt="40-dup">
+      <img src="carousel/41.jpg" alt="41-dup">
+      <img src="carousel/42.jpg" alt="42-dup">
+      <img src="carousel/43.jpg" alt="43-dup">
+      <img src="carousel/44.jpg" alt="44-dup">
+      <img src="carousel/45.jpg" alt="45-dup">
+      <img src="carousel/46.jpg" alt="46-dup">
+      <img src="carousel/47.jpg" alt="47-dup">
+      <img src="carousel/48.jpg" alt="48-dup">
+      <img src="carousel/49.jpg" alt="49-dup">
+      <img src="carousel/50.jpg" alt="50-dup">
+    </div> <!-- CHIUSURA carousel-track -->
+  </div> <!-- CHIUSURA carousel -->
+
+  <!-- Motivational Text -->
+  <div class="motivational-text" style="text-align: center; margin: 60px auto; max-width: 800px;">
+    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
+    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
+    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
+    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
+    <p style="font-size: 22px; color: #00bfff; margin: 10px 0; line-height: 1.8;"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
   </div>
-</footer>
+
+  <!-- Footer -->
+  <footer style="text-align: center; width: 100%; margin-top: 50px; padding: 20px;">
+    <p style="margin-bottom: 20px; color: #00bfff; font-size: 16px;">Visite reali:</p>
+
+    <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
+
+    <div class="policies" style="font-size: 12px; margin-top: 30px;">
+      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Privacy Policy</a> |
+      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Termini e Condizioni</a> |
+      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Cookie Policy</a>
+    </div>
+
+    <div class="full-policies" style="margin-top: 20px; font-size: 10px; color: #777777; padding: 0 20px; max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.6;">
+      <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
+      <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
+      <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
+      <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
+      © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
+    </div>
+  </footer>
 
 </body>
 </html>
