@@ -100,6 +100,7 @@
       border-radius: 10px;
     }
 
+    /* Posizionamento delle scritte laterali per dispositivi mobili */
     @media (max-width: 768px) {
       .side-text-top-left,
       .side-text-top-right,
@@ -111,15 +112,25 @@
         width: 100%;
       }
       
-      /* Posiziona il testo tra i pack 2 e 3 */
+      /* Posiziona il testo tra il Pack 2 e il Pack 3 */
       .motivational-text {
         position: static;
         margin-top: 40px;
         text-align: center;
       }
+
+      .packs-container {
+        display: block;
+        text-align: center;
+      }
+      
+      /* Scritte tra i pack */
+      .motivational-text {
+        margin-top: 50px;
+      }
     }
 
-    /* --- CAROSELLO ORIZZONTALE --- */
+    /* CAROSELLO ORIZZONTALE */
     .carousel {
       overflow: hidden;
       white-space: nowrap;
@@ -132,7 +143,7 @@
       display: inline-flex;
       animation: scroll 60s linear infinite;
       will-change: transform;
-      min-width: 200%; /* Fissa il carosello orizzontale */
+      min-width: 200%;
     }
 
     .carousel-track img {
