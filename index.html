@@ -106,13 +106,14 @@ p.subtitle {
   .side-text-top-right,
   .side-text-pack-left,
   .side-text-pack-right {
-    position: relative; /* <-- cambia da absolute a relative */
+    position: relative;
     width: 100%;
     text-align: center;
     margin: 20px auto;
-    top: auto; /* <-- elimina la posizione verticale assoluta */
+    top: auto;
     left: auto;
     right: auto;
+    z-index: 10; /* Aggiunto per evitare che si sovrapponga agli altri elementi */
   }
 } /* <-- Questa è la chiusura giusta del media query */
 
