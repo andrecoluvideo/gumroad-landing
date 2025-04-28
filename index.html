@@ -10,6 +10,7 @@
   <style>
     body, html {
       margin: 0;
+      padding: 0;
       overflow-x: hidden;
       background-color: #0a0a0a;
       background-image: repeating-linear-gradient(
@@ -24,11 +25,6 @@
       background-attachment: fixed;
     }
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
     header {
       text-align: center;
       padding: 50px 20px 20px;
@@ -36,7 +32,7 @@
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 45px;
+      font-size: 50px;
       background: linear-gradient(90deg, #ff4d4d, #00bfff, #ffa500);
       background-clip: text;
       -webkit-background-clip: text;
@@ -71,7 +67,6 @@
       text-decoration: none;
       color: inherit;
       overflow: hidden;
-      position: relative;
     }
 
     .pack-green { border-color: #00ffae; }
@@ -84,47 +79,25 @@
 
     .media-box {
       width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
 
-    .media-box img, 
+    .media-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+    }
+
     .media-box video {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
       aspect-ratio: 9/16;
-    }
-
-    .pack-title {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .pack-price {
-      font-size: 20px;
-      color: #00ffae;
-      margin-bottom: 10px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 10px 20px;
-      background-color: #00bfff;
-      color: white;
-      font-family: 'Raleway', sans-serif;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #007acc;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -189,13 +162,12 @@
   </div>
 
 </div> <!-- CHIUSURA packs-container -->
-
 <!-- SCRITTE LATERALI BASSE -->
-<div style="position: absolute; left: 20px; top: 1000px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+<div style="position: absolute; left: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
   Una foto, infinite possibilità.
 </div>
 
-<div style="position: absolute; right: 20px; top: 1000px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
+<div style="position: absolute; right: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
   Ogni immagine ha un potere nascosto.
 </div>
 
@@ -203,7 +175,8 @@
 <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
   Possibilità di pagamento in due rate
 </div>
-<!-- INIZIO CAROSELLO -->
+
+<!-- CAROSELLO ORIZZONTALE -->
 <div class="carousel">
   <div class="carousel-track">
     <img src="carousel/1.jpg" alt="1">
@@ -256,8 +229,10 @@
     <img src="carousel/48.jpg" alt="48">
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
-
-    <!-- DUPLICATI PER LOOP INFINITO -->
+  </div> <!-- CHIUSURA carousel-track -->
+</div> <!-- CHIUSURA carousel -->
+<!-- DUPLICATI PER LOOP INFINITO -->
+<div class="carousel-track">
     <img src="carousel/1.jpg" alt="1-dup">
     <img src="carousel/2.jpg" alt="2-dup">
     <img src="carousel/3.jpg" alt="3-dup">
@@ -288,7 +263,7 @@
     <img src="carousel/28.jpg" alt="28-dup">
     <img src="carousel/29.jpg" alt="29-dup">
     <img src="carousel/30.jpg" alt="30-dup">
-        <img src="carousel/31.jpg" alt="31-dup">
+    <img src="carousel/31.jpg" alt="31-dup">
     <img src="carousel/32.jpg" alt="32-dup">
     <img src="carousel/33.jpg" alt="33-dup">
     <img src="carousel/34.jpg" alt="34-dup">
@@ -308,42 +283,39 @@
     <img src="carousel/48.jpg" alt="48-dup">
     <img src="carousel/49.jpg" alt="49-dup">
     <img src="carousel/50.jpg" alt="50-dup">
-  </div> <!-- CHIUSURA carousel-track -->
-</div> <!-- CHIUSURA carousel -->
-
-<!-- MOTIVATIONAL TEXT -->
-<div class="motivational-text">
-  <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
-  <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
-  <p>Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
-  <p>Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
-  <p><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
+</div> <!-- CHIUSURA duplicati carousel-track -->
+<!-- Motivational Text -->
+<div class="motivational-text" style="text-align: center; margin: 60px auto; max-width: 800px;">
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
+  <p style="font-size: 22px; color: #00bfff; margin: 10px 0; line-height: 1.8;"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <p style="margin-bottom: 20px; color: #00bfff;">Visite reali:</p>
+<!-- Footer -->
+<footer style="text-align: center; width: 100%; margin-top: 50px; padding: 20px;">
+  <p style="margin-bottom: 20px; color: #00bfff; font-size: 16px;">Visite reali:</p>
 
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
 
-  <div class="policies">
-    <a href="javascript:void(0);">Privacy Policy</a> |
-    <a href="javascript:void(0);">Termini e Condizioni</a> |
-    <a href="javascript:void(0);">Cookie Policy</a>
+  <div class="policies" style="font-size: 12px; margin-top: 30px;">
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Privacy Policy</a> |
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Termini e Condizioni</a> |
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Cookie Policy</a>
   </div>
 
-  <div class="full-policies">
+  <div class="full-policies" style="margin-top: 20px; font-size: 10px; color: #777777; padding: 0 20px; max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.6;">
     <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
     <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
     <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
     <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
   </div>
 
-  <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #555;">
+  <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
     © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
   </div>
 </footer>
 
 </body>
 </html>
-
