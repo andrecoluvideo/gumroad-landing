@@ -29,38 +29,6 @@
       100% { transform: translateX(-50%); }
     }
 
-    .carousel {
-      margin-top: 100px;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 20px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .carousel-track {
-      display: inline-flex;
-      animation: scroll 100s linear infinite;
-      will-change: transform;
-    }
-
-    .carousel:hover .carousel-track {
-      animation-play-state: paused;
-    }
-
-    .carousel img {
-      height: 240px;
-      margin: 0 10px;
-      border-radius: 12px;
-      border: 4px solid #00bfff;
-      transition: transform 0.3s ease;
-    }
-
-    .carousel img:hover {
-      transform: scale(1.1);
-      z-index: 5;
-    }
-
     header {
       text-align: center;
       padding: 50px 20px 20px;
@@ -89,7 +57,6 @@
       flex-wrap: wrap;
       gap: 40px;
       padding: 20px;
-      position: relative;
     }
 
     .pack {
@@ -102,9 +69,7 @@
       transition: transform 0.3s ease, border-color 0.5s;
       text-decoration: none;
       color: inherit;
-      overflow: visible;
-      margin-bottom: 60px;
-      position: relative;
+      overflow: hidden;
     }
 
     .pack-green { border-color: #00ffae; }
@@ -115,11 +80,18 @@
       transform: scale(1.05);
     }
 
-    .pack img {
-      max-width: 100%;
+    .media-box {
+      width: 100%;
       border-radius: 10px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .media-box img, 
+    .media-box video {
+      width: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .pack-title {
@@ -142,7 +114,7 @@
 
     .cta-button {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       padding: 10px 20px;
       background-color: #00bfff;
       color: white;
@@ -157,45 +129,72 @@
       background-color: #007acc;
     }
 
-    .video-box {
-      width: 300px;
-      height: 500px;
+    .carousel {
+      margin-top: 100px;
       overflow: hidden;
+      white-space: nowrap;
+      padding: 20px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel-track {
+      display: inline-flex;
+      animation: scroll 100s linear infinite;
+      will-change: transform;
+    }
+
+    .carousel img {
+      height: 240px;
+      margin: 0 10px;
       border-radius: 12px;
+      border: 4px solid #00bfff;
       transition: transform 0.3s ease;
-      margin-top: 20px;
     }
 
-    .video-box:hover {
-      transform: scale(1.05);
+    .carousel img:hover {
+      transform: scale(1.1);
+      z-index: 5;
     }
 
-    .video-box video {
+    footer {
+      text-align: center;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 12px;
+      color: #cccccc;
     }
 
-    .side-text-top-left {
-      position: absolute;
-      left: 20px;
-      top: 100px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
+    .policies {
+      font-size: 12px;
+      margin-top: 10px;
     }
 
-    .side-text-top-right {
-      position: absolute;
-      right: 20px;
-      top: 100px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 18px;
-      color: #eeeeee;
-      width: 220px;
-      text-align: center;
+    .policies a {
+      color: #00bfff;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .policies a:hover {
+      text-decoration: underline;
+    }
+
+    .full-policies {
+      margin-top: 20px;
+      font-size: 10px;
+      color: #777777;
+      padding: 0 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .full-policies p {
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -207,88 +206,56 @@
 
 <div class="packs-container">
 
-  <!-- Scritta Sinistra -->
-  <div class="side-text-top-left">Tutto inizia da un'immagine.</div>
-
-  <!-- Scritta Destra -->
-  <div class="side-text-top-right">Tutto diventa possibile con un'idea.</div>
-
-  <!-- PRIMO PACK (GREEN) -->
-  <a class="pack pack-green" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
-    <img src="images/character_forge.png" alt="Character Forge">
-    <div class="pack-title">Character Forge Legend Pack</div>
-    <div class="pack-price">19,90€</div>
-
-    <!-- CTA Pulsante -->
-    <div style="margin: 10px 0;">
-      <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
-        Scopri il Pack
-      </a>
-    </div>
-
-    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
-
-    <div class="video-box">
+  <!-- PACK 1: Character Forge -->
+  <div class="pack pack-green">
+    <div class="media-box">
+      <img src="images/character_forge.png" alt="Character Forge">
       <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
     </div>
-  </a>
-
-  <!-- SECONDO PACK (PURPLE) -->
-  <a class="pack pack-purple" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
-    <img src="images/elite_pack.png" alt="Elite Characters">
-    <div class="pack-title">Elite Characters</div>
-    <div class="pack-price">29,90€</div>
-
-    <!-- CTA Pulsante -->
-    <div style="margin: 10px 0;">
-      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
-        Scopri il Pack
-      </a>
-    </div>
-
-    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
-
-    <div class="video-box">
-      <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
-    </div>
-  </a>
-
-  <!-- TERZO PACK (BLUE) -->
-  <a class="pack pack-blue" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
-    <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
-    <div class="pack-title">PromptMagnet Infinite Edition</div>
-    <div class="pack-price">50€</div>
-
-    <!-- CTA Pulsante -->
-    <div style="margin: 10px 0;">
-      <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
-        Scopri il Pack
-      </a>
-    </div>
-
-    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
-
-    <div class="video-box">
-      <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
-    </div>
-  </a>
-
-  <!-- TESTI LATERALI DOPO I PACK -->
-  <div class="side-text-pack-left" style="position: absolute; left: 20px; top: 1000px; font-family: 'Raleway', sans-serif; font-size: 18px; color: #eeeeee; width: 220px; text-align: center;">
-    Una foto, infinite possibilità.
+    <div class="pack-title">Character Forge Legend Pack</div>
+    <div class="pack-price">19,90€</div>
+    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
+    <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
+      Scopri il Pack
+    </a>
   </div>
 
-  <div class="side-text-pack-right" style="position: absolute; right: 20px; top: 1000px; font-family: 'Raleway', sans-serif; font-size: 18px; color: #eeeeee; width: 220px; text-align: center;">
-    Ogni immagine ha un potere nascosto.
+  <!-- PACK 2: Elite Characters -->
+  <div class="pack pack-purple">
+    <div class="media-box">
+      <img src="images/elite_pack.png" alt="Elite Characters">
+      <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
+    </div>
+    <div class="pack-title">Elite Characters</div>
+    <div class="pack-price">29,90€</div>
+    <div class="pack-desc">Crea personaggi esclusivi su misura.</div>
+    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
+      Scopri il Pack
+    </a>
+  </div>
+
+  <!-- PACK 3: PromptMagnet Infinite -->
+  <div class="pack pack-blue">
+    <div class="media-box">
+      <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
+      <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
+    </div>
+    <div class="pack-title">PromptMagnet Infinite Edition</div>
+    <div class="pack-price">50€</div>
+    <div class="pack-desc">Creazioni illimitate per ogni stile.</div>
+    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
+      Scopri il Pack
+    </a>
   </div>
 
 </div> <!-- packs-container -->
+
 <!-- SCRITTA PAGAMENTO -->
 <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
   Possibilità di pagamento in due rate
 </div>
 
-<!-- CAROSELLO IMMAGINI -->
+<!-- INIZIO CAROSELLO -->
 <div class="carousel">
   <div class="carousel-track">
     <img src="carousel/1.jpg" alt="1">
@@ -393,9 +360,9 @@
     <img src="carousel/48.jpg" alt="48-dup">
     <img src="carousel/49.jpg" alt="49-dup">
     <img src="carousel/50.jpg" alt="50-dup">
-
   </div>
 </div>
+<!-- Motivational Text -->
 <div class="motivational-text">
   <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
   <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
@@ -404,6 +371,7 @@
   <p><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
 </div>
 
+<!-- Footer -->
 <footer>
   <p style="margin-bottom: 20px; color: #00bfff;">Visite reali:</p>
 
