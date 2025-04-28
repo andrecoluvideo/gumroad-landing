@@ -175,6 +175,28 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .side-text-top-left {
+      position: absolute;
+      left: 20px;
+      top: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
+
+    .side-text-top-right {
+      position: absolute;
+      right: 20px;
+      top: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -197,6 +219,7 @@
     <div class="pack-title">Character Forge Legend Pack</div>
     <div class="pack-price">19,90€</div>
 
+    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" class="cta-button">
         Scopri il Pack
@@ -216,6 +239,7 @@
     <div class="pack-title">Elite Characters</div>
     <div class="pack-price">29,90€</div>
 
+    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" class="cta-button" style="background-color: #9d00ff;">
         Scopri il Pack
@@ -235,6 +259,7 @@
     <div class="pack-title">PromptMagnet Infinite Edition</div>
     <div class="pack-price">50€</div>
 
+    <!-- CTA Pulsante -->
     <div style="margin: 10px 0;">
       <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" class="cta-button" style="background-color: #00bfff;">
         Scopri il Pack
@@ -249,17 +274,21 @@
   </a>
 
   <!-- TESTI LATERALI DOPO I PACK -->
-  <div class="side-text-pack-left">Una foto, infinite possibilità.</div>
-  <div class="side-text-pack-right">Ogni immagine ha un potere nascosto.</div>
-
-  <!-- SCRITTA PAGAMENTO -->
-  <div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
-    Possibilità di pagamento in due rate
+  <div class="side-text-pack-left" style="position: absolute; left: 20px; top: 1000px; font-family: 'Raleway', sans-serif; font-size: 18px; color: #eeeeee; width: 220px; text-align: center;">
+    Una foto, infinite possibilità.
   </div>
-  <!-- FINE SCRITTA PAGAMENTO -->
 
+  <div class="side-text-pack-right" style="position: absolute; right: 20px; top: 1000px; font-family: 'Raleway', sans-serif; font-size: 18px; color: #eeeeee; width: 220px; text-align: center;">
+    Ogni immagine ha un potere nascosto.
+  </div>
+
+</div> <!-- packs-container -->
+<!-- SCRITTA PAGAMENTO -->
+<div style="text-align: center; margin: 50px auto 30px; font-size: 20px; color: #00bfff; font-family: 'Raleway', sans-serif;">
+  Possibilità di pagamento in due rate
 </div>
 
+<!-- CAROSELLO IMMAGINI -->
 <div class="carousel">
   <div class="carousel-track">
     <img src="carousel/1.jpg" alt="1">
@@ -312,7 +341,7 @@
     <img src="carousel/48.jpg" alt="48">
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
-    
+
     <!-- DUPLICATI PER LOOP INFINITO -->
     <img src="carousel/1.jpg" alt="1-dup">
     <img src="carousel/2.jpg" alt="2-dup">
@@ -364,9 +393,9 @@
     <img src="carousel/48.jpg" alt="48-dup">
     <img src="carousel/49.jpg" alt="49-dup">
     <img src="carousel/50.jpg" alt="50-dup">
+
   </div>
 </div>
-
 <div class="motivational-text">
   <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
   <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
