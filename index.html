@@ -106,12 +106,15 @@ p.subtitle {
   .side-text-top-right,
   .side-text-pack-left,
   .side-text-pack-right {
-    position: static;
-    margin: 20px auto;
-    text-align: center;
+    position: relative; /* <-- cambia da absolute a relative */
     width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    top: auto; /* <-- elimina la posizione verticale assoluta */
+    left: auto;
+    right: auto;
   }
-} /* CHIUSURA MANCANTE PRIMA! */
+} /* <-- Questa è la chiusura giusta del media query */
 
 /* --- Ora il carosello sarà letto bene! --- */
 .carousel {
