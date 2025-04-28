@@ -100,36 +100,24 @@
       border-radius: 10px;
     }
 
-    /* Posizionamento delle scritte laterali per dispositivi mobili */
+    /* Nascondi le scritte laterali per la versione mobile */
     @media (max-width: 768px) {
       .side-text-top-left,
       .side-text-top-right,
       .side-text-pack-left,
       .side-text-pack-right {
-        position: static;
-        margin: 20px auto;
-        text-align: center;
-        width: 100%;
-      }
-
-      /* Posiziona il testo tra il Pack 2 e il Pack 3 */
-      .motivational-text {
-        position: static;
-        margin-top: 40px;
-        text-align: center;
+        display: none; /* Nascondiamo le scritte laterali su dispositivi mobili */
       }
 
       .packs-container {
-        display: block;
-        text-align: center;
+        flex-direction: column;
       }
 
-      .motivational-text {
-        margin-top: 50px;
+      .media-box img {
+        aspect-ratio: auto;
       }
     }
 
-    /* CAROSELLO ORIZZONTALE */
     .carousel {
       overflow: hidden;
       white-space: nowrap;
@@ -142,7 +130,7 @@
       display: inline-flex;
       animation: scroll 60s linear infinite;
       will-change: transform;
-      min-width: 200%;
+      min-width: 200%; /* ECCO IL FIX */
     }
 
     .carousel-track img {
@@ -162,10 +150,9 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
   </style>
-</head>
 
+</head>
 <body>
   <header>
     <h1>CREA. DOMINA. ISPIRA.</h1>
@@ -234,7 +221,7 @@
 
   </div> <!-- CHIUSURA packs-container -->
 
-  <!-- SCRITTE LATERALI BASSE -->
+  <!-- SCRITTE LATERALI BASSE (versione mobile) -->
   <div style="position: absolute; left: 20px; top: 1100px; width: 200px; text-align: center; font-family: 'Raleway', sans-serif; font-size: 16px; color: #eeeeee;">
     Una foto, infinite possibilità.
   </div>
@@ -250,7 +237,7 @@
 
   <!-- CAROSELLO ORIZZONTALE -->
   <div class="carousel">
-    <div class="carousel-track">
+     <div class="carousel-track">
       <img src="carousel/1.jpg" alt="1">
       <img src="carousel/2.jpg" alt="2">
       <img src="carousel/3.jpg" alt="3">
@@ -301,7 +288,7 @@
       <img src="carousel/48.jpg" alt="48">
       <img src="carousel/49.jpg" alt="49">
       <img src="carousel/50.jpg" alt="50">
-      <!-- DUPLICATI PER LOOP INFINITO -->
+  <!-- DUPLICATI PER LOOP INFINITO -->
       <img src="carousel/1.jpg" alt="1-dup">
       <img src="carousel/2.jpg" alt="2-dup">
       <img src="carousel/3.jpg" alt="3-dup">
@@ -352,41 +339,40 @@
       <img src="carousel/48.jpg" alt="48-dup">
       <img src="carousel/49.jpg" alt="49-dup">
       <img src="carousel/50.jpg" alt="50-dup">
-    </div> <!-- CHIUSURA carousel-track -->
+   </div> <!-- CHIUSURA carousel-track -->
   </div> <!-- CHIUSURA carousel -->
+<!-- Motivational Text -->
+<div class="motivational-text" style="text-align: center; margin: 60px auto; max-width: 800px;">
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
+  <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
+  <p style="font-size: 22px; color: #00bfff; margin: 10px 0; line-height: 1.8;"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
+</div>
 
-  <!-- Motivational Text -->
-  <div class="motivational-text" style="text-align: center; margin: 60px auto; max-width: 800px;">
-    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
-    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
-    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Visual storytelling indimenticabili, book cover spettacolari, contenuti virali per TikTok e Reels.</p>
-    <p style="font-size: 22px; color: #ffffff; margin: 10px 0; line-height: 1.8;">Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
-    <p style="font-size: 22px; color: #00bfff; margin: 10px 0; line-height: 1.8;"><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
+<!-- Footer -->
+<footer style="text-align: center; width: 100%; margin-top: 50px; padding: 20px;">
+  <p style="margin-bottom: 20px; color: #00bfff; font-size: 16px;">Visite reali:</p>
+
+  <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
+
+  <div class="policies" style="font-size: 12px; margin-top: 30px;">
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Privacy Policy</a> |
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Termini e Condizioni</a> |
+    <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Cookie Policy</a>
   </div>
 
-  <!-- Footer -->
-  <footer style="text-align: center; width: 100%; margin-top: 50px; padding: 20px;">
-    <p style="margin-bottom: 20px; color: #00bfff; font-size: 16px;">Visite reali:</p>
+  <div class="full-policies" style="margin-top: 20px; font-size: 10px; color: #777777; padding: 0 20px; max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.6;">
+    <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
+    <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
+    <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
+    <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
+  </div>
 
-    <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
-
-    <div class="policies" style="font-size: 12px; margin-top: 30px;">
-      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Privacy Policy</a> |
-      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Termini e Condizioni</a> |
-      <a href="javascript:void(0);" style="color: #00bfff; margin: 0 8px;">Cookie Policy</a>
-    </div>
-
-    <div class="full-policies" style="margin-top: 20px; font-size: 10px; color: #777777; padding: 0 20px; max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.6;">
-      <p><strong>Privacy Policy:</strong> I dati raccolti tramite il sito sono trattati in conformità alla normativa sulla protezione dei dati personali. Non verranno ceduti a terzi senza consenso.</p>
-      <p><strong>Termini e Condizioni:</strong> L'utilizzo del sito è regolato dai termini e condizioni riportati. È vietato l'uso illecito dei contenuti.</p>
-      <p><strong>Cookie Policy:</strong> Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza. Continuando la navigazione, accetti l'uso dei cookie.</p>
-      <p><strong>Politica Resi:</strong> I prodotti venduti sono digitali e non prevedono diritto di recesso o rimborsi, come previsto dalla normativa vigente sui beni digitali.</p>
-    </div>
-
-    <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
-      © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
-    </div>
-  </footer>
+  <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
+    © 2025 Powered by <strong>Andrea Colucci</strong> · All Rights Reserved 🚀
+  </div>
+</footer>
 
 </body>
 </html>
