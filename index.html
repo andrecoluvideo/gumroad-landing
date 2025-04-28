@@ -123,7 +123,26 @@
       .media-box img {
         aspect-ratio: auto;
       }
+      /* Per la versione mobile, centriamo il footer e le politiche */
+      footer .policies,
+      footer .full-policies {
+        text-align: center; /* Centra il testo */
+        width: 100%; /* Occupa tutta la larghezza disponibile */
+        margin: 0 auto; /* Assicura che sia centrato */
+      }
+
+      footer .policies a {
+        display: inline-block; /* Rende i link orizzontali all'interno del footer */
+        margin: 0 10px; /* Aggiungi spazio tra i link */
+      }
+
+      footer .full-policies {
+        font-size: 12px; /* Puoi regolare la dimensione del testo per renderlo leggibile su mobile */
+        margin-top: 20px; /* Aggiungi un po' di spazio sopra */
+        color: #777; /* Colore grigio per il testo */
+      }
     }
+  </style>
 
     .carousel {
       overflow: hidden;
