@@ -11,7 +11,7 @@
     body, html {
       margin: 0;
       overflow-x: hidden;
-      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><line x1="0" y1="300" x2="300" y2="0" stroke="%23ff0000" stroke-opacity="0.08" stroke-width="1"/></svg>') repeat;
+      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><line x1="0" y1="100" x2="100" y2="0" stroke="%23ff0000" stroke-opacity="0.07" stroke-width="1"/></svg>') repeat;
       font-family: 'Helvetica Neue', sans-serif;
       color: #e0e0e0;
       background-attachment: fixed;
@@ -54,7 +54,8 @@
       text-decoration: none;
       color: inherit;
       overflow: visible;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      position: relative;
     }
     .pack-green { border-color: #00ffae; }
     .pack-purple { border-color: #9d00ff; }
@@ -70,72 +71,166 @@
     }
     .pack-title {
       font-size: 20px;
-      margin: 10px 0 5px;
       font-weight: bold;
+      margin-bottom: 10px;
     }
     .pack-price {
       font-size: 18px;
-      margin: 5px 0;
-      color: #00bfff;
-      font-weight: bold;
+      color: #00ffae;
+      margin-bottom: 8px;
     }
     .pack-desc {
       font-size: 16px;
-      margin: 10px 0;
+      color: #cccccc;
+      margin-bottom: 15px;
     }
     .cta-button {
       display: inline-block;
-      margin: 10px 0 20px;
+      margin-bottom: 15px;
       padding: 10px 20px;
       background-color: #00bfff;
-      color: #111;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
       text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
     .cta-button:hover {
-      background-color: #0099cc;
+      background-color: #007acc;
     }
-<a class="pack pack-green" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
-  <img src="images/character_forge.png" alt="Character Forge">
-  <div class="pack-title">Character Forge Legend Pack</div>
-  <div class="pack-price">19,90€</div>
-  <div class="cta-button">
-    <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">Scopri il Pack</a>
-  </div>
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
-  </div>
-</a>
+    .video-box {
+      width: 300px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+    .video-box:hover {
+      transform: scale(1.05);
+    }
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .side-text-top-left {
+      position: absolute;
+      left: 20px;
+      top: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
+    .side-text-top-right {
+      position: absolute;
+      right: 20px;
+      top: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
+    .side-text-pack-left {
+      position: absolute;
+      left: 20px;
+      top: 600px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
+    .side-text-pack-right {
+      position: absolute;
+      right: 20px;
+      top: 600px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #eeeeee;
+      width: 220px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
 
-<a class="pack pack-purple" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
-  <img src="images/elite_pack.png" alt="Elite Characters">
-  <div class="pack-title">Elite Characters</div>
-  <div class="pack-price">29,90€</div>
-  <div class="cta-button">
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">Scopri il Pack</a>
-  </div>
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
-  </div>
-</a>
+<header>
+  <h1>CREA. DOMINA. ISPIRA.</h1>
+  <p class="subtitle">Costruisci il tuo mondo visivo con i nostri pack esclusivi. Trasforma una foto in personaggi animati, racconta storie, crea video, film e infinite possibilità. È il tuo momento. Devi solo iniziare.</p>
+</header>
 
-<a class="pack pack-blue" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
-  <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
-  <div class="pack-title">PromptMagnet Infinite Edition</div>
-  <div class="pack-price">50€</div>
-  <div class="cta-button">
-    <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">Scopri il Pack</a>
-  </div>
-  <div class="video-box">
-    <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
-  </div>
-</a>
+<div class="packs-container">
+  <div class="side-text-top-left">Tutto inizia da un'immagine.</div>
+  <div class="side-text-top-right">Tutto diventa possibile con un'idea.</div>
+  <a class="pack pack-green" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">
+    <img src="images/character_forge.png" alt="Character Forge">
+    <div class="pack-title">Character Forge Legend Pack</div>
+    <div class="pack-price">19,90€</div>
+    
+<!-- BOTTONE CTA -->
+<div style="margin: 10px 0;">
+  <a href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank" style="background-color: #00bfff; color: white; padding: 10px 20px; border-radius: 8px; font-family: 'Raleway', sans-serif; font-size: 16px; text-decoration: none; display: inline-block; transition: background-color 0.3s;">
+    Scopri il Pack
+  </a>
+</div>
+<!-- FINE BOTTONE CTA -->
+    
+    <div class="pack-desc">Forgia personaggi epici e narrativi.</div>
+    <a class="cta-button" href="https://andrecoluvideo.gumroad.com/l/characterforge?layout=profile" target="_blank">Scopri di più</a>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_vertical1.mp4"></video>
+    </div>
+  </a>
 
-<div class="side-text-video-left">Disegna il tuo mondo. Nessuno può immaginarlo meglio di te.</div>
+  <a class="pack pack-purple" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">
+    <img src="images/elite_pack.png" alt="Elite Characters">
+    <div class="pack-title">Elite Characters</div>
+    <div class="pack-price">29,90€</div>
+
+<!-- BOTTONE CTA -->
+<div style="margin: 10px 0;">
+  <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank" style="background-color: #9d00ff; color: white; padding: 10px 20px; border-radius: 8px; font-family: 'Raleway', sans-serif; font-size: 16px; text-decoration: none; display: inline-block; transition: background-color 0.3s;">
+    Scopri il Pack
+  </a>
+</div>
+<!-- FINE BOTTONE CTA -->
+
+<div class="pack-desc">Crea personaggi esclusivi su misura.</div>
+
+    <a class="cta-button" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-elite?layout=profile" target="_blank">Scopri di più</a>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_orizzontale.mp4"></video>
+    </div>
+  </a>
+
+  <a class="pack pack-blue" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">
+    <img src="images/infinite_pack.png" alt="PromptMagnet Infinite">
+    <div class="pack-title">PromptMagnet Infinite Edition</div>
+    <div class="pack-price">50€</div>
+
+<!-- BOTTONE CTA -->
+<div style="margin: 10px 0;">
+  <a href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank" style="background-color: #00ffae; color: #111; padding: 10px 20px; border-radius: 8px; font-family: 'Raleway', sans-serif; font-size: 16px; text-decoration: none; display: inline-block; transition: background-color 0.3s;">
+    Scopri il Pack
+  </a>
+</div>
+<!-- FINE BOTTONE CTA -->
+
+<div class="pack-desc">Creazioni illimitate per ogni stile.</div>
+
+    <a class="cta-button" href="https://andrecoluvideo.gumroad.com/l/promptmagnet-infinite?layout=profile" target="_blank">Scopri di più</a>
+    <div class="video-box">
+      <video autoplay muted loop playsinline src="videos/video_vertical2.mp4"></video>
+    </div>
+  </a>
+
+  <div class="side-text-pack-left">Una foto, infinite possibilità.</div>
+  <div class="side-text-pack-right">Ogni immagine ha un potere nascosto.</div>
 </div>
 
 <!-- SCRITTA PAGAMENTO -->
@@ -196,7 +291,6 @@
     <img src="carousel/48.jpg" alt="48">
     <img src="carousel/49.jpg" alt="49">
     <img src="carousel/50.jpg" alt="50">
-
     <!-- immagini duplicate per scorrimento infinito -->
     <img src="carousel/1.jpg" alt="1-dup">
     <img src="carousel/2.jpg" alt="2-dup">
@@ -248,9 +342,8 @@
     <img src="carousel/48.jpg" alt="48-dup">
     <img src="carousel/49.jpg" alt="49-dup">
     <img src="carousel/50.jpg" alt="50-dup">
-  </div>
-</div>
-
+  </div> <!-- fine carousel-track -->
+</div> <!-- fine carousel -->
 <div class="motivational-text">
   <p>Dai vita al tuo universo creativo, crea personaggi unici per i tuoi video musicali.</p>
   <p>Fumetti, protagonisti per i tuoi film, eroi per i tuoi videogame, animazioni mozzafiato per motion comics.</p>
@@ -258,6 +351,7 @@
   <p>Serie animate, grafiche per campagne pubblicitarie e infinite storie visive.</p>
   <p><strong>Con i nostri pack, l'unico limite è la tua immaginazione.</strong></p>
 </div>
+
 <footer>
   <p>Visite reali:</p>
   <script src="https://cdn.counter.dev/script.js" data-id="ad231f5a-8451-4e90-b391-fbde9a857525" data-utcoffset="2"></script>
